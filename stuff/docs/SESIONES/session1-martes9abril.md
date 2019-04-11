@@ -1,6 +1,8 @@
 # Sessions Training LeadTech
 
-## Session 1 - Martes 9 Abril
+## ️☝️ Session 1 - Martes 9 Abril
+
+📺 https://vimeo.com/329760654
 
 #### Command Line
 - [Command Line](https://learncodethehardway.org/unix/)
