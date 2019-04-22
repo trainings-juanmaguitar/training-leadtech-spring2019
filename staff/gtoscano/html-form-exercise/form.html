@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form html</title>
+</head>
+<body>
+        <h1>A Simple Form</h1>
+        <p>Form Fundamentals</p>
+
+        <form action="/login" method="post">
+            <fieldset>
+                <legend>Customer Info</legend>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name" placeholder="Enter your name" autofocus="autofocus" required></td>    
+                    </tr>
+                    <tr>
+                        <td>Telephone:</td>
+                        <td><input type="tel" name="telephone" placeholder="Pattern: 1-234-567-8910" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email address:</td> 
+                        <td><input type="email" name="email" placeholder="Enter ypur email address" required></td> 
+                    </tr>        
+                </table>    
+            </fieldset>
+            <fieldset>
+                <legend>Books</legend>
+                <label>
+                    <select name="select">
+                        <option value="2">El gran Gatsby</option>
+                        <option value="3">El retrato de Dorian Gray</option>
+                        <option value="4">Gente tóxica</option>
+                        <option value="5">Moby Dick</option>
+                        <option value="6">El embrujo de Shanghai</option>
+                    </select>
+                </label>
+                <label>
+                    Quantity (Maximum 5):
+                    <input type="number" name="quantity">
+                </label>    
+            </fieldset>
+            <br>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+        <p>2011 Acme United All rights reserved.</p>
+    </body>
+</html>
