@@ -1,8 +1,6 @@
 
 ## ️☝️ Session 2 - Jueves 11 Abril
 
-!SLIDE html5
-
 #### Clear Ideas
 
 - [The Three Layers of Web Design](https://www.diigo.com/annotated/d95c68479ed8691b39e7e12951343e12)
