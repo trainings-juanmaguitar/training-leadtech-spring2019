@@ -10,19 +10,28 @@
     <section>
         <h1>A Simple Form</h1>
         <h4><i>Form Fundamentals</i></h4>
-        <form>
+        <form action="#" method="POST">
             <fieldset>
               <legend>Customer Info</legend>
-              Name: <input type="text" placeholder="Enter your name" autofocus="x" required><br>
-              Telephone: <input type="text" placeholder="Pattern: 1-234-567-8910" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
-              Email address: <input type="text" placeholder="Enter your email address" required>
+              <label for="name">Name:</label> 
+              <input id="name" type="text" placeholder="Enter your name" autofocus="x" required><br>
+              <label for="tel">Telephone:</label> 
+              <input id="tel" type="tel" placeholder="Pattern: 1-234-567-8910" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+              <label for="mail">Email address:</label> 
+              <input id="mail" type="email" placeholder="Enter your email address" multiple required>
             </fieldset>
           </form>
           <form>
             <fieldset>
               <legend>Books</legend>
-              <input type="text">
-              Quantity (Maximum 5) <input type="number"  min="1" max="5">
+              <input list="books" name="books">
+                <datalist id="books">
+                  <option value="book1">
+                  <option value="book2">
+                  <option value="book3">
+                </datalist>
+              <label for="quantity">Quantity (Maximum 5)</label>
+              <input id="quantity" type="number"  min="1" max="5">
             </fieldset>
             <input type="submit" name="submit" value="Submit">
           </form>
