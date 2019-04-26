@@ -7,21 +7,26 @@
   <title>Form</title>
 </head>
 <body>
-  <form action="/" method="POST">
+  <form action="#" method="POST">
     <fieldset>
       <legend>Customer info</legend>
       <label for="name">Name</label>
-      <input id="name" type="text" name="name" autofocus placeholder="Type you Name" required>
+      <input id="name" type="text" name="name" autofocus placeholder="Type you Name" >
       <label for="phone">Telephone</label>
-      <input id="phone" type="tel" name="phone" pattern="[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Tel format: 12-345-67-89" required>
+      <input id="phone" type="tel" name="phone" placeholder="Tel format: 12-345-67-89" >
       <label for="email">Email adress</label>
-      <input id="email" type="email" nem="email" placeholder="Type your email(s)" multiple required>
+      <input id="email" type="email" nem="email" placeholder="Type your email(s)" multiple>
     </fieldset>
       
     <fieldset>
       <legend>Books</legend>
       <label for="booklist">Books</label>
       <input list="booklist" name="booklist">
+      <select name="" id="">
+        <option value="">sdfdfds</option>
+        <option value="">dfsfsdsdf</option>
+        <option value="">fsdfds</option>
+      </select>
       <datalist id="booklist">
         <option value="Book1">
         <option value="Book2">
