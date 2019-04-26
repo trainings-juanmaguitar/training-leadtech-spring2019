@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+    <h1>A Simple Form</h1>
+    <h2>Form Fundamentals</h2>
+    <form action="#" method="post" name="form">
+        <fieldset>
+            <legend>Customer Info</legend>
+            <dl>
+                <dd><label for="name"><strong>Name:*</strong></label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required autofocus size="30"/></dd><br>
+                <dd><label for="phone"><strong>Telephone:*</strong></label>
+                <input type="tel" name="phone" id="phone" placeholder="Pattern:1-234-567-8910" required pattern="[0-9]{11}" size="30"/></dd><br>
+                <dd><label for="mail"><strong>Email address:*</strong></label>
+                <input type="email" name="mail" id="mail" placeholder="Enter your email address" required size="30"></dd>
+            </dl>
+        </fieldset>
+        <fieldset>
+                <legend>Books</legend>
+                <dd>
+                    <select name="books" required>
+                        <option value="1">Book 1</option>
+                        <option value="2">Book 2</option>
+                        <option value="3">Book 3</option>
+                    </select>
+                    <label for="quantity"><strong>Quantity (Maximum 5):</strong></label>
+                    <input type="number" name="quantity" id="quantity" min="1" max="5"/></dt>
+                </dd>
+        </fieldset>
+        <dl>
+            <dt><input type="submit" name="submit" value="Submit"></dt>
+        </dl>
+    </form>
+</body>
+</html>
