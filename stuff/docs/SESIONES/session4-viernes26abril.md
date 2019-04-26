@@ -39,6 +39,8 @@ See boxes w/ your own eyes
 > A flex container @@expands items to fill available free space@@, or @@shrinks them to prevent overflow@@.
 
 
+![flexbox](./img/flexbox.png)
+
 #### ✍️ Practice Flexbox
 
 Choose a partner and do the following exercise online (in pairs) to practice Flexbox: http://flexboxfroggy.com/
