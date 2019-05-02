@@ -42,12 +42,18 @@ function MultiplicationTableOnDemand(RequestedNumber){
 //Write a program that writes in the console all the multiples of 23 less than 500 and at the end writes the sum of all of them
 
 function Calculation(){
-    var acc;
-    for (i=1; i<500; i++){
+    var acc=null;
+    var table=""
+    for (i=0; i<500; i++){
         if (i%23 == 0){
-            console.log (i)
-            acc +=i;
+            
+            table+=" "+i
+           acc+=i
         }
+        
+
     }
-    
+    console.log (table)
+    console.log(acc)       
+
 }
