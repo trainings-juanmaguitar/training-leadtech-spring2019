@@ -49,11 +49,24 @@ function Calculation(){
             
             table+=" "+i
            acc+=i
-        }
-        
-
+        } 
     }
     console.log (table)
     console.log(acc)       
 
 }
+
+//max() function
+//Define a function max() that takes two numbers as arguments and returns
+// the largest of them. Use the if-then-else construct available in Javascript.
+
+function Max (a, b){
+if (a > b){
+console.log(a)
+}else{
+console.log(b)
+}
+}
+
+//maxOfThree() function
+//Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
