@@ -3,7 +3,6 @@
   "name": "leadtech-training",
   "alias": ["leadtech-training"],
   "builds": [
-    { "src": "server.js", "use": "@now/node" },
-    { "src": "www/package.json", "use": "@now/static-build" }
+    { "src": "server.js", "use": "@now/node" }
   ]
 }
