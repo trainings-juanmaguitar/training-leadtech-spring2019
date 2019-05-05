@@ -6,8 +6,8 @@
   "scripts": {
     "build": "gitbook build ./stuff/gitbook/content/",
     "serve:book": "gitbook serve ./stuff/gitbook/content/",
-    "serve:dev": "cross-env NODE_ENV=development node server",
-    "serve:prod": "cross-env NODE_ENV=production node server",
+    "serve:dev": "cross-env NODE_ENV=development node index",
+    "serve:prod": "cross-env NODE_ENV=production node index",
     "postinstall": "npm run build",
     "now-build": "npm run serve:prod"
   },
