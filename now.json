@@ -1,6 +1,6 @@
 {
-    "alias": ["leadtech-training"],
-    "builds": [
-        { "src": "server.js", "use": "@now/node" }
-      ]
-  }
+  "alias": ["leadtech-training"],
+  "builds": [
+    { "src": "server.js", "use": "@now/node" }
+  ]
+}
