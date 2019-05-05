@@ -1,7 +1,8 @@
 {
   "version": 2,
+  "name": "leadtech-training",
   "alias": ["leadtech-training"],
   "builds": [
-    { "src": "stuff/gitbook/server.js", "use": "@now/node" }
+      { "src": "**/*.js", "use": "@now/node" }
   ]
 }
