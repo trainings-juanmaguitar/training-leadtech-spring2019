@@ -12,7 +12,9 @@ function test() {
  * Si ejecutamos test() el resultado será undefined y 2, porque
  * estamos decarando la variable despues de hacer el console.log 
  * y por eso da undefined, en el caso de foo() ya nos está diciendo
- * que la función nos tiene que hacer un return de 2. */ 
+ * que la función nos tiene que hacer un return de 2. Es consecuencia
+ * del LexicalScope
+ */ 
 
 // 2.What is result?
 var a = 1; 
@@ -28,10 +30,15 @@ function someFunction(number) {
 
 var firstResult = someFunction(9);
 var result = firstResult(2);
+
 /** Si lanzamos la función someFunction() en la consola este realiza
  * una segunda función que nos dará un return de a=1 poque es el valor
- * inicial que le hemos dado a a pero posteriormente le volvemos a dar
- * a a un valo de 5 y es con el que nos quedaremos finalmente.
+ * que se le da a al inicio del código.
+ * Una vez lanza otherFunction vuelve a cambiar el valor de a a 5 y
+ * crea un return de la función otherfunction.
+ * cuando ejecutamos result, la primera función ha modificado el 
+ * valor de a y nos devolverá 5 que es el valor que tiene en el primer
+ * ámbito.
  * Los valores que le damos entre parentesis a las funciones no los 
  * utilizamos para nada.
  */
@@ -68,9 +75,9 @@ var result = firstResult(2);
 
 var a = 1; 
 function b() { 
-    a = 10; 
-    return; 
-    function a() {} 
+   function a() {} // = var a= function () {} 
+   a = 10; 
+   return; 
 } 
 b(); 
 console.log(a);
