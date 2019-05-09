@@ -41,17 +41,30 @@ function multiplicationTableOnDemand(RequestedNumber){
 //Write a program that writes in the console all the multiples of 23 less than 500 and at the end writes the sum of all of them
 
 function calculation(){
-    var acc=null;
+    var acc=0;
     var table=""
     for (i=0; i<500; i++){
         if (i%23 == 0){
-            
-            table+=" "+i
+            table+=i+ "\t"
            acc+=i
         } 
     }
-    console.log (table)
-    console.log(acc)       
+    return table
+    return acc       
+
+}
+
+//alternativa
+function calculation(){
+    var acc=0;
+    var table=""
+    for (i=0; i<500; i+=23){
+           table+=i+ "\t"
+           acc+=i
+        } 
+    
+    return table
+    return acc       
 
 }
 
@@ -108,6 +121,13 @@ function isVowel(letter){
   
 
 }
+//Alternativas
+function isVowel(letter){
+   return ['a','e','i','o','u'].includes(letter)
+  
+
+}
+
 //Hexadecimal
 //Writes a function that convert a hexadecimal color, "blue" for example
 // "#0000FF" in its RGB representation rgb(0,0,255)". 
