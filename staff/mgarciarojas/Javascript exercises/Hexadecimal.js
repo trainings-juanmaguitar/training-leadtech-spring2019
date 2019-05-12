@@ -18,3 +18,20 @@ function getRGB(hexaColor){
    rgb+=")";
    return rgb
 }
+
+
+function getRGBenhanced(hexaColor){
+    var hexadecimal=hexaColor;
+    var rgb="rgb (";
+    for (var i =1; i<7; i=i+2){
+     if (hexadecimal.substring(i,i+2)=='FF'){
+         rgb+="255,";
+        
+     }else{
+         rgb+="0,";
+     }
+    }
+     rgb=rgb.substr(0, rgb.length-1);
+    rgb+=")";
+    return rgb
+ }
