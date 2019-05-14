@@ -14,3 +14,17 @@ function calculation(){
     return acc       
 
 }
+
+
+function calculationRework(){
+    var acc=0;
+    var table=""
+    for (i=0; i<500; i+=23){
+           table+=i+ "\t"
+           acc+=i     
+      }
+      table += "El resultado de la suma es "+acc 
+    return table
+         
+
+}

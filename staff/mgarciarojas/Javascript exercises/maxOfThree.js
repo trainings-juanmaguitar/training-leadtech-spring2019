@@ -4,19 +4,19 @@
 function maxOfThree(a,b,c) {
     if (a>b){
         if (a>c && a!=b){
-            return console.log(a)
+            return a
         }else{
             if(a==b || a==c){
-             return console.log(a)
+             return a
             }
-            return console.log(c)
+            return c
         }
     
     } else{
         if (b>c){
-            return console.log(b)
+            return b
         } else{
-            return console.log(b);
+            return b
         }
         
     }
