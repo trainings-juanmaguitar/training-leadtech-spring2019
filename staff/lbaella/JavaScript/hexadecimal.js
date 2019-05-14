@@ -57,9 +57,10 @@ function getRGB_enhanced (color) {
         }
      ];
 
+
    for (var i = 0; i < colors.length; i++) {
        if (color === colors[i].hexadecimal)
             result += ' ' + colors[i].name;
     }
-    return result;
+    console.log("Result: "+result);
 }

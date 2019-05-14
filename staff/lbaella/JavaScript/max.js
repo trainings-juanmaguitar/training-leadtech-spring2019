@@ -4,9 +4,9 @@ Define a function max() that takes two numbers as arguments and returns the larg
 */
 
 function max(i,j) {
-    if (i<j) console.log(j);
-    else if (i>j) console.log(i);
-    else console.log("equals");
+    if (i<j) return j;
+    else if (i>j) return i;
+    else return "equals";
 }
 
 /*
