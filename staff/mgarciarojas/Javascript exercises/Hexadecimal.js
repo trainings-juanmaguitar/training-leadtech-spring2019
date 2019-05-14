@@ -35,3 +35,28 @@ function getRGBenhanced(hexaColor){
     rgb+=")";
     return rgb
  }
+
+ /**
+  * Buenas prácticas
+  * 
+  */
+var colors = {
+  "#000000": "Black",
+  "#FFFFFF": "White",
+}
+  function getRGB(hexColor){
+
+    var redHex = hexColor.substring(1,3)
+    var greenHex =hexColor.substring(3,5)
+    var blueHex = hexColor.substring(5,7)
+
+    var redDecimal = parseInt (redHex, 16)
+    var greenDecimal = parseInt (greenHex, 16)
+    var blueDecimal = parseInt (blueHex, 16)
+    var result = " rgb("+ redDecimal+ ","+ greenDecimal+","+ blueDecimal+ ")" + colors[hexColor]
+// para comprobar si existe el color dentro del objeto
+    if (colors[hexColor]){
+     result += colors[hexColor]
+        }
+    return result
+  }

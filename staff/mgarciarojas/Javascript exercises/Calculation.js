@@ -19,12 +19,28 @@ function calculation(){
 function calculationRework(){
     var acc=0;
     var table=""
-    for (i=0; i<500; i+=23){
+    for (i=23; i<500; i+=23){
            table+=i+ "\t"
            acc+=i     
       }
       table += "El resultado de la suma es "+acc 
     return table
-         
 
+}
+
+// buenas prácticas 
+// nombrar las funciones y variables de forma correcta y hacerlo lo más legible posible. 
+// nombre de funciones siempre empezando en minúscula y camelCase
+// sólo las funciones constructoras pueden empezar con mayúscula
+
+function multiplesOf23(){
+ var listMultiples23 = ""
+ var sumMultiples23= 0
+ var messageResult="";
+    for (var i=23; i<500; i+=23){
+        listMultiples23 += i + "\t"
+        sumMultiples23 += i;
+    }
+    messageResult =  "List is "+listMultiples23+ " Sum is "+sumMultiples23
+    return messageResult
 }
