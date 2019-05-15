@@ -78,14 +78,11 @@ function translate(string){
     var origin = string;
     var finale = [];
     for( var i = 0; i < origin.length; i++){        
-        if(origin[i] == ' '){
-          //console.log(" ");
+        if(origin[i] == ' '){        
           finale.push(" ")
-        }else if (origin[i] == "a" || origin[i] == "e" || origin[i] == "i" || origin[i] == "o" || origin[i] == "u"){
-          //console.log(origin[i]);
+        }else if (origin[i] == "a" || origin[i] == "e" || origin[i] == "i" || origin[i] == "o" || origin[i] == "u"){          
           finale.push(origin[i])
-        } else {
-          //console.log(origin[i] + "o" + origin[i]);
+        } else {        
           finale.push(origin[i] + "o" + origin[i]);
         }
     }
@@ -142,5 +139,67 @@ translate("this is fun");
  */
 
  function reverse(string){
-     var
+     var initial = string;
+     var finale = [];
+     for( var i = initial.length-1; i >= 0; i--){
+         finale.push(initial[i]);
+     }
+     var string = finale.toString();
+     var reversed = string.replace(/[,]/g, '');
+     return reversed;
+ }
+ reverse("jag testar");
+
+
+ /**
+  * translate()
+  * Represente un pequeño léxico bilingüe como un objeto Javascript 
+  * de la siguiente manera: 
+  * {
+  *     "merry" : "god", 
+  *     "christmas" : "jul", 
+  *     "and" : "och", 
+  *     "happy" : gott ", 
+  *     "new " : "nytt",
+  *     "year" :" år "
+  * }
+  *  y úselo para traducir sus tarjetas de Navidad del inglés al sueco.
+  */
+
+function translate(string){
+ var language = {
+    "merry" : "god", 
+    "christmas" : " jul", 
+    "and" : " och", 
+    "happy" : " gott", 
+    "new" : " nytt",
+    "year" : " år"
+  };
+  var translateInitial = string.split(' ');
+  var translateFinal = [];
+  for( var i = 0; i < translateInitial.length; i++){
+      if ( language[translateInitial[i]]){
+          translateFinal.push(language[translateInitial[i]]);
+      } else {
+          return "ERROR"
+      }
+  }
+  var string = translateFinal.toString();
+  var result = string.replace(/[,]/g, '');
+  return result;
+}
+
+
+/**
+ * findLongestWord()
+ * Escriba una función findLongestWord() que toma un array 
+ * de palabras y devuelve la longitud de la más larga.
+ */
+
+ function findLongestWord(array){     
+     var length = [];
+     for ( var i = 0; i < array.length; i++){
+        length.push(array[i].length); 
+     }
+     return Math.max.apply(null, length);
  }
