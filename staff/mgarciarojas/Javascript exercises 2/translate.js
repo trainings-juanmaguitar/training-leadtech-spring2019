@@ -12,8 +12,9 @@ That is, double every consonant and place an occurrence of "o" in between.
    console.log(chars)
    var translation="";
    for (i=0; i<chars.length; i++){
-       
-       if (['a','e','i','o','u'].includes(chars[i])||chars[i]==" "){
+    
+      // if (['a','e','i','o','u'].includes(chars[i])||chars[i]==" "){
+        if (/[aeiouAEIOU]/.test(chars[i])||chars[i]==" "){
         translation += chars[i]
        
        }else{
