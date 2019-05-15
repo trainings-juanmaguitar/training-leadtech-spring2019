@@ -5,7 +5,6 @@ Writes a function that convert a hexadecimal color, "blue" for example "#0000FF"
 function getRGB (color) {
 
     var value = color.split('#',6);
-   //console.log(value);
     var red = parseInt(value[1].substring(0,2),16);
     var green = parseInt(value[1].substring(2,4), 16);
     var blue = parseInt(value[1].substring(4,6), 16);
@@ -57,10 +56,75 @@ function getRGB_enhanced (color) {
         }
      ];
 
-
    for (var i = 0; i < colors.length; i++) {
        if (color === colors[i].hexadecimal)
             result += ' ' + colors[i].name;
     }
     console.log("Result: "+result);
+
+    return 'rgb('+red+','+green+','+blue+')';
 }
+
+/* Mejoras */
+var colors = {
+    "#000000" : "black",
+    "#FFFFFF": "white",
+    "#FF0000" : "red",
+    "#00FF00": "green",
+    "#0000FF" : "blue"
+ }
+
+function getRGB_enhanced (color) {
+
+    var value = color.split('#',6);
+    var red = parseInt(value[1].substring(0,2),16);
+    var green = parseInt(value[1].substring(2,4), 16);
+    var blue = parseInt(value[1].substring(4,6), 16);
+
+    var result =  'rgb('+red+','+green+','+blue+')';
+    if (colors[color]) return result += colors[color];
+    else return result;
+}
+
+
+/* Función que cuenta cuantas veces se ejectuta */
+
+
+function getHowManyTimes() {
+    var howManyTimes = 0
+    return function() {
+        return ++howManyTimes
+    }
+}
+
+var howManyTimes = getHowManyTimes();
+
+howManyTimes() //1
+howManyTimes() //2
+howManyTimes() //3
+
+
+/* ---- */
+
+var password = setPassword("12345")
+password() //[3] -> 12345
+password() //[2] -> 12345
+password() //[1] -> 12345
+password() //Máximo de intentos
+
+
+
+
+function setPassword(password) {
+    var numTries = 3;
+    return function() {
+        if (--numTries) {
+            return "[" + numTries + "] -> " + password;
+        } 
+        else {
+            return "Máximo intentos"
+        }
+    }
+}
+
+var password = setPassword("12345")

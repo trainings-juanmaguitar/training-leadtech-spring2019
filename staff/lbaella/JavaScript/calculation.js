@@ -15,3 +15,17 @@ function calculation() {
     }
     return "ELEMENTS: "+elements+"\n SUMA: "+sum;
 }
+
+
+/* Mejoras Semánticas */ 
+function multiplesOf23() {
+    var listMultiples23 = '';
+    var sumMultiples23 = 0;
+    var messageResult = "";
+    for (var i=23; i<500; i+=23) {
+        listMultiples23 += i + '\t';
+        sumMultiples23 += i;
+    }
+    messageResult = "ELEMENTS: "+listMultiples23+"\n SUMA: "+sumMultiples23;
+    return messageResult;
+}
