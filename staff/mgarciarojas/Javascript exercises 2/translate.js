@@ -8,15 +8,17 @@ That is, double every consonant and place an occurrence of "o" in between.
 
  function translate (text) {
 
-   var chars = text.split()
+   var chars = text.split('')
+   console.log(chars)
    var translation="";
-   for (i=0; i<chars.length-1; i++){
+   for (i=0; i<chars.length; i++){
        
-       if (!['a','e','i','o','u'].includes(chars[i])){
-
-        translation += chars[i]+"o"+ chars[i]
-       }else{
+       if (['a','e','i','o','u'].includes(chars[i])||chars[i]==" "){
         translation += chars[i]
+       
+       }else{
+        translation += chars[i]+"o"+ chars[i]
+   
        }
    }
    return translation
