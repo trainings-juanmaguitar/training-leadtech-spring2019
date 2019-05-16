@@ -10,7 +10,7 @@
     <h1>HTML5 Form Exercise</h1>
     <h2><b>A Simple Form</b></h2>
     <h4><i>Form Fudamentals</i></h4>
-    <form action="/send.html" method="post">
+    <form action="#" method="post">
         <fieldset>
             <legend>Customer Info</legend>
             <label for="username">Name: </label>
@@ -22,7 +22,7 @@
         </fieldset>
         <fieldset>
             <legend>Books</legend>
-            <select id="books" required autofocus>
+            <datalist id="books" required autofocus>
                 <option value="">--Please choose an option--</option>
                 <option value="book1">Book 1</option>
                 <option value="book2">Book 2</option>
@@ -30,7 +30,7 @@
                 <option value="book4">Book 4</option>
                 <option value="book5">Book 5</option>
                 <option value="book6">Book 6</option>
-            </select>
+            </datalist>
             <label for="quantity">Quantity (maximum 5): </label>
             <input type="number" name="quantity" min="1" max="5" required>               
         </fieldset>
