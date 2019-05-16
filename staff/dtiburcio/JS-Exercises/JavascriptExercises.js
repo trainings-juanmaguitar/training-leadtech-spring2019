@@ -28,24 +28,19 @@ Define a function sum() and a function multiply() that sums and multiplies (resp
 */
 
 function sum(arrayToSum){
-    var arraySum = arrayToSum;
-    var quantity = arraySum.length - 1;
     var result = 0;
 
-   for (var i=0; i <= quantity; i++){
-        result += arraySum[i];
+   for (var i=0; i < arrayToSum.length; i++){
+        result += arrayToSum[i];
     }
-
     return result;
 }
 
 function multiply(arrayToMultiply){
-    var arrayMultiply = arrayToMultiply;
-    var quantity = arraySum.length - 1;
     var result = 1;
 
-   for (var i=0; i <= quantity; i++){
-        result *= arraySum[i];
+   for (var i=0; i < arrayToMultiply.length; i++){
+        result *= arrayToMultiply[i];
     }
 
     return result;
@@ -57,11 +52,10 @@ Define a function reverse() that computes the reversal of a string. For example,
 */
 
 function reverse(stringToReverse){
-    var stringReverse = stringToReverse;
     var arrayResult = [];
 
-    for (var i = 0; i < stringReverse.length; i++){
-        arrayResult[stringReverse.length - i] = stringReverse[i];
+    for (var i = 0; i < stringToReverse.length; i++){
+        arrayResult[stringToReverse.length - i] = stringToReverse[i];
     }
 
     result = arrayResult.toString().replace(/,/g, '');
@@ -75,35 +69,20 @@ Represent a small bilingual lexicon as a Javascript object in the following fash
 
 function translate(stringtoTranslate){
     var stringTranslate = stringtoTranslate.split(' ');
-    var words = stringTranslate.length - 1;
-
-    for (var i = 0; i <= words; i++){
-        switch (stringTranslate[i]) {
-            case 'merry': 
-                stringTranslate[i] = 'god'; 
-                break;
-            case 'christmas':
-                stringTranslate[i] = 'jul';
-                break;
-            case 'and':
-                stringTranslate[i] = 'och';
-                break;
-            case 'happy':
-                stringTranslate[i] = 'gott';
-                break;
-            case 'new':
-                stringTranslate[i] = 'nytt';
-                break;
-            case 'year':
-                stringTranslate[i] = 'år';
-                break;
-            default:
-                break;
-          }
+    var lexicon = {
+        "merry":"god", "christmas":"jul", "and":"och", "happy":"gott","new":"nytt","year":"år"
     }
-    var result = stringTranslate.join();
-    var result2 = result.replace(/,/g,' ');
-    return result2;
+    var stringResult = '';
+
+    for (var i = 0; i < stringTranslate.length; i++){
+        if (typeof lexicon[stringTranslate[i]] === 'undefined'){
+            stringResult += stringTranslate[i] + ' ';
+        }
+        else { 
+            stringResult += lexicon[stringTranslate[i]] + ' ';
+        }
+    }
+    return stringResult.trim();
 }
 
 /*
@@ -112,16 +91,15 @@ Write a function findLongestWord() that takes an array of words and returns the 
 */
 
 function findLongestWord(stringToEvaluate){
-    var stringEvaluate = stringToEvaluate.split(' ');
-    var words = stringEvaluate.length - 1;
+    var arrayEvaluate = stringToEvaluate.split(' ');
     var result = '';
     var max = 0;
 
-    for (var i = 0; i <= words; i++){
-        temp = stringEvaluate[i].length;
+    for (var i = 0; i < arrayEvaluate.length; i++){
+        temp = arrayEvaluate[i].length;
         
         if (temp > max){
-            result = stringEvaluate[i];
+            result = arrayEvaluate[i];
             max = temp;
         }
     }
@@ -135,13 +113,10 @@ Write a function filterLongWords() that takes an array of words and an integer i
 
 function filterLongWords(stringOfWords, mininum){
     var listOfWords = stringOfWords.split(' ');
-    var words = listOfWords.length - 1;
-    var min = mininum;
-    console.log(min);
     var result = [];
 
-    for (var i = 0; i <= words; i++){
-        if (listOfWords[i].length > min){
+    for (var i = 0; i < listOfWords.length; i++){
+        if (listOfWords[i].length > mininum){
             result.push(listOfWords[i]);
         }
     }
@@ -154,23 +129,15 @@ Write a function charFreq() that takes a string and builds a frequency listing o
 */
 
 function charFreq(stringEvaluate){
-    var stringLetters = stringEvaluate;
-    var letters = stringLetters.length - 1;
 
-    var freq = new Object();
-            freq.letraA = 0;
-            freq.letraB = 0;
-            freq.letraC = 0;   
+    var freq = new Object();  
 
-    for (var i = 0; i <= letters; i++){
-        if (stringLetters[i] == 'a'){
-            freq.letraA += 1;
-        }
-        if (stringLetters[i] == 'b'){
-            freq.letraB += 1;
-        }
-        if (stringLetters[i] == 'b'){
-            freq.letraC += 1;
+    for (var i = 0; i < stringEvaluate.length; i++){
+    
+        if (freq.getAttribute(stringEvaluate[i])){
+                freq.stringEvaluate[i] += 1;
+        }else{
+            freq.setAttribute(stringEvaluate[i], 1);
         }
     }
     return freq;
