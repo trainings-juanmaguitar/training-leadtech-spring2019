@@ -14,3 +14,18 @@ for (var i = 0; i<charArray.length; i ++){
 }
 return freqListing;
 }
+
+
+// en clase
+
+function charFreq (sText){
+    var nNumChars = sText.length
+    var sCurrentChar = sText.length
+    var oFreqChars = {}
+    for (var i=0; i<nNumChars; i++) {
+        sCurrentChar=nNumChars[i];
+        if (!oFreqChars[sCurrentChar]) oFreqChars[sCurrentChar]= 1 // if abreviado
+        else ++oFreqChars[sCurrentChar]
+    }
+    return oFreqChars
+    }
