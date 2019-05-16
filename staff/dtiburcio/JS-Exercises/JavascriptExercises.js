@@ -134,10 +134,10 @@ function charFreq(stringEvaluate){
 
     for (var i = 0; i < stringEvaluate.length; i++){
     
-        if (freq.getAttribute(stringEvaluate[i])){
-                freq.stringEvaluate[i] += 1;
+        if (freq[stringEvaluate[i]]){
+                freq[stringEvaluate[i]] += 1;
         }else{
-            freq.setAttribute(stringEvaluate[i], 1);
+            freq[stringEvaluate[i]] = 1;
         }
     }
     return freq;
