@@ -203,3 +203,22 @@ function translate(string){
      }
      return Math.max.apply(null, length);
  }
+
+
+ /**
+  * filterLongWords()
+  * Escriba una función filterLongWords() que tome una array de 
+  * palabras y un entero i y devuelva la array de palabras que 
+  * son más largas que i.
+  */
+
+
+  function filterLongWords(words, limit){      
+      var solutionWords = [];
+      for( var i = 0; i<words.length; i++){
+          if(words[i].length > limit){
+              solutionWords.push(words[i]);
+          }
+      }
+      return solutionWords;
+  }
