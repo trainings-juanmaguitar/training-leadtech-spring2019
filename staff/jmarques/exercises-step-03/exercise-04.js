@@ -2,11 +2,13 @@
 //      If the number was smaller than 40, print all the numbers down to the randomized
 //      one(i.e.if the result was 37, you should print: 40, 39, 38, 37)
 function randomOddSmallers() {
+
     var numRandom = Math.floor(Math.random(0) * 100),
         index = 40,
         numbersOdd = [],
         numbersOddReverse,
         result;
+        
     if (numRandom >= 40) {
         while (index <= numRandom) {
             if (index % 2) {

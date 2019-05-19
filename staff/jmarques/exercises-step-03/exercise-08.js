@@ -2,6 +2,7 @@
 //      such that both numbers are divided by it with no remainder.
 //      For instance, for 9 and 6 you should print 3. If there isn't one a proper note should be printed.
 function randomSmallest() {
+
     var numList = [];
     [0, 1].forEach(function () {
         var numRandom = Math.floor(Math.random() * 100);
@@ -22,4 +23,5 @@ function randomSmallest() {
 
     return result;
 }
+
 randomSmallest();

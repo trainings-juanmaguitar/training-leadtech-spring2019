@@ -1,7 +1,10 @@
 // 9 -- Randomizes two numbers and prints the smallest number that is greater than one,
 //      such that both numbers are divided by it with no remainder.
 //      For instance, for 9 and 6 you should print 3. If there isn't one a proper note should be printed.
+
+// Hago otra subida en mi rama porque la anterior estaba en la rama master :(
 function randomLeastCommon() {
+
     var numList = [];
     [0, 1].forEach(function () {
         var numRandom = Math.floor(Math.random() * (10 - 1)) + 1;
@@ -38,4 +41,5 @@ function arrPopulate(num) {
     }
     return mainArr
 }
+
 randomLeastCommon();
