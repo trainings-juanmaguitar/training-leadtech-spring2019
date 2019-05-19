@@ -7,11 +7,40 @@ function translateSwedish(string) {
     var words = {"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"};
     var stringArray = string.split(' ');
     var translate = "";
-    console.log(stringArray);
     for (var i = 0; i< stringArray.length; i++) {
         if (words[stringArray[i]]) {
             translate += words[stringArray[i]] + ' ';
+            //translate.push(words[stringArray[i]]);
         }
     }
-    return translate;
+    return translate.trim();
+    //return translate.join(" ")
 }
+
+//translate.trim() -> Quita espacios delantes y depsués del string
+//Join generamos un string de un array separado por espacio o lo que se le indique netre parentesis
+
+
+
+/* Opción clousure */
+
+function translate(dictionary) {
+    return function translateSwedish(string) {
+       
+        var stringArray = string.split(' ');
+        var translate = "";
+        for (var i = 0; i< stringArray.length; i++) {
+            if (words[stringArray[i]]) {
+                translate += words[stringArray[i]] + ' ';
+                //translate.push(words[stringArray[i]]);
+            }
+        }
+        return translate.trim();
+        //return translate.join(" ")
+    }
+}
+
+var words = {"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"};
+
+var translateToSwedish = translate(words)
+translateToSwedish("Merry Christmas")

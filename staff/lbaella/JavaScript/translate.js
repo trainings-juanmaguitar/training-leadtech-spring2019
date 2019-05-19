@@ -5,10 +5,9 @@ Write a function translate() that will translate a text into "rövarspråket". T
 
 function translate (text) {
     var textTranslate= "";
-    var arrayText = text.split('');
+    //var arrayText = text.split(''); El string lo podemos tratar como un array
     for (var i=0; i< text.length; i++) {
-        var letter = arrayText[i];
-        console.log(letter);
+        var letter = text[i];
         if (['a','e','i','o','u'].includes(letter)) {
             textTranslate += letter; 
         }  else if (letter === ' '){
