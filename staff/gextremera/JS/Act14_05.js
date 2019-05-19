@@ -92,6 +92,29 @@ function translate(string){
 }
 
 translate("this is fun");
+/**
+ * Solución JuanMa
+ */
+function isVowel(sChar){
+    return ['a', 'e', 'i', 'o', 'u'].includes();
+} 
+function translate(sText){
+    var aChars = sText.plit('');
+    var sResult = '';
+    var sCurrentChar = '';
+    for( var i = 0; i < aChars.length; i++){
+        sCurrentChar = aChars[i];
+        if (isVowel(sCurrentChar) || sCurrentChar === ' '){
+            sResult = sCurrentChar;
+        } else {
+            sResult += sCurrentChar + '0' + sCurrentChar;
+        }
+    }
+    return sResult
+}   
+
+
+
 
 
 /**
@@ -189,6 +212,53 @@ function translate(string){
   return result;
 }
 
+/**
+ * Solución JuanMa
+ */
+// obteniendo un string
+message = "merry christmas and happy new year";
+
+function translate(sMessageEnglish){
+    var dictionary = {
+        "merry" : "god", 
+        "christmas" : " jul", 
+        "and" : " och", 
+        "happy" : " gott", 
+        "new" : " nytt",
+        "year" : " år"
+    };
+    var aWordsMessage = sMessageEnglish.split(" ");
+    var sCurrentWord = '';
+    var sTranslatedMessage = '';
+    for( var i = 0; i < aWordsMessage.length; i++){
+        sCurrentWord = aWordsMessage[i];
+        sTranslatedMessage += dictionary[sCurrentWord] + '';
+    }
+    return sTranslatedMessage.trim()
+}
+//obteniendo array y convertiendolo en string
+message = "merry christmas and happy new year";
+
+function translate(sMessageEnglish){
+    var dictionary = {
+        "merry" : "god", 
+        "christmas" : " jul", 
+        "and" : " och", 
+        "happy" : " gott", 
+        "new" : " nytt",
+        "year" : " år"
+    };
+    var aWordsMessage = sMessageEnglish.split(" ");
+    var sCurrentWord = '';
+    var sTranslatedMessage = [];
+    for( var i = 0; i < aWordsMessage.length; i++){
+        sCurrentWord = aWordsMessage[i];
+        sTranslatedMessage.push(dictionary[sCurrentWord]);
+    }
+    return sTranslatedMessage.join(' ')
+}
+//clousure
+
 
 /**
  * findLongestWord()
@@ -222,3 +292,42 @@ function translate(string){
       }
       return solutionWords;
   }
+
+
+  /**
+   * charFreq()
+   * Escriba una función charFreq() que toma una cadena y construye 
+   * una lista de frecuencias de los caracteres que contiene. 
+   * Representa el listado de frecuencias como un objeto Javascript. 
+   * Pruébalo con algo como charFreq ("abbabcbdbabdbdbabababcbcbab").
+   */
+
+   function charFreq(string){
+       var solution = {};
+       for(var i = 0; i<string.length; i++){
+
+       }
+   }
+
+/**
+ * Solución JuanMa
+ */
+function charFreq(sText){
+    var numChars = sText.length;
+    var sCurrentChar = sText.length;
+    var oFreqChars = {};
+    for(var i = 0; i<numChars; i++){
+        sCurrentChar = sText[i];
+        if(!oFreqChars[sCurrentChar]){
+            oFreqChars[sCurrentChar] = 1;
+        }else{
+            ++oFreqChars[sCurrentChar];
+        }
+    }
+}
+
+/**
+ * Esto se puede recortar de la siguiente manera:
+ *  if(!oFreqChars[sCurrentChar]) oFreqChars[sCurrentChar] = 1;
+ *  else ++oFreqChars[sCurrentChar];        
+ */
