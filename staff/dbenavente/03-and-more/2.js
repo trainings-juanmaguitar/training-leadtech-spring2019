@@ -1,0 +1,18 @@
+/*
+randomEven()
+Randomizes a number (range 0..100), then prints all the even numbers from 0 to the randomized.
+*/
+
+function randomEven(){
+  var randomNumber = Math.floor(Math.random()*(101))
+  var rangeEven = ' '
+  console.log(randomNumber)
+  for (var i=0;i<=randomNumber;i++){
+    if(i%2===0){
+      rangeEven += i+'\t '
+    }
+  }
+  return rangeEven
+}
+
+console.log(randomEven())
