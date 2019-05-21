@@ -1,4 +1,14 @@
 'use strict';
+//https://github.com/juanmaguitar/exercises-javascript/blob/master/02-more-steps/README.md
+
+//Notación húngara
+
+// 1. Tipo de dato
+// s -> string
+// a -> array
+// n -> number
+// ...number
+// ..
 
 //translate()
 //Write a function translate() that will translate a text into "rövarspråket". 
@@ -28,6 +38,26 @@ function translate(word) {
 }
 
 translate("window is wind");
+
+//Solution 2
+
+function isVowel(sChar) {
+  return ['a', 'e', 'i', 'o', 'u'].includes(sChar);
+}
+
+function translate(sText) {
+  var sResult = '';
+  var sCurrentChar = '';
+  for (var i=0; i<sText.length; i++) {
+    sCurrentChar = sText[i];
+    if (isVowel(sCurrentChar) || sCurrentChar === ' ') {
+      sResult += sCurrentChar;
+    } else {
+      sResult += sCurrentChar + 'o' + sCurrentChar
+    }
+  }
+  return sResult;
+}
 
 
 //sum() & multiply()
@@ -107,6 +137,38 @@ function translate(sentence) {
 
 console.log(translate("merry christmas and happy new year 2019!"));
 
+//Solution 2
+
+
+function translateToSwedish(sMessageEnglish) {
+  var aWordsMessage = sMessageEnglish.split(' ');
+  var sCurrentWord = '';
+  for ( var i=0; i<aWordsMessage.length; i++) {
+    sCurrentWord = aWordsMessage[i];
+    sTranslatedMessage = dictionary[sCurrentWord]+ ' ';
+  }
+  return sTranslatedMessage.trim(); // Para eliminar espacios en blanco delante y detrás
+}
+console.log(translate("merry christmas and happy new year 2019!"));
+
+//Solution 3
+
+
+function translate(dictionary) {
+  return function (sMessageEnglish) {
+    var aWordsMessage = sMessageEnglish.split(' ');
+    var sCurrentWord = '';
+    for ( var i=0; i<aWordsMessage.length; i++) {
+      sCurrentWord = aWordsMessage[i];
+      sTranslatedMessage = dictionary[sCurrentWord]+ ' ';
+    }
+    return sTranslatedMessage.trim(); // Para eliminar espacios en blanco delante y detrás
+  }
+}
+
+var translateToSwedish = translate({"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"});
+translateToSwedish("merry christmas and happy new year 2019!");
+
 
 //findLongestWord()
 //Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
@@ -163,3 +225,26 @@ function charFreq(myString){
 };
 
 console.log(charFreq("abbabcbdbabdbdbabababcbcbab"));
+
+
+
+function log(elem) {
+  console.log(elem);
+}
+
+function mul(item) {
+  return item * 2
+}
+
+function isEven(item) {
+  return item%2 === 0;
+}
+
+[2,5,4,9].forEach(log);
+[2,5,4,9].map(mul);   // [4,10,8,18]
+[2,5,4,9].filter(isEven);
+[2,5,4,9].reduce(function(acc, elem, inddex, array) {
+
+}, init);
+
+
