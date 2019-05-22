@@ -14,4 +14,3 @@ function randomLargest() {
     result = `El número mayor en el Array:[${numRandomList}] es: ${Math.max.apply(null, numRandomList)}`;
     return result;
 }
-randomLargest();

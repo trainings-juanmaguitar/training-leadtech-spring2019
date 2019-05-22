@@ -29,7 +29,7 @@ function randomLeastCommon() {
         numRandom2: numList[1],
         arr1: arr1,
         arr2: arr2,
-        result: arrResult
+        result: `Multiples comun: [${arrResult}] Minimo multiple comun = ${arrResult[0]}`
     }
     return result;
 }
