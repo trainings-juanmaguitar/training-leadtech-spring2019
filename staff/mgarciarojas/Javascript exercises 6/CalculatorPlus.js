@@ -21,7 +21,6 @@ returns the result of the operation applied to the values passed as parameters
             switch (sOperation){
                 case 'suma':       
                  nFinalResult +=arg
-            
                 break;
                 case "resta":
                 nFinalResult -=arg

@@ -14,3 +14,8 @@ Randomizes three numbers in range (0.. 100) and prints the largest one.
     }
     return nLargest
  }
+
+ var randomLargest = () => new Array(3)
+ .fill(0)
+ .map(() => Math.round(Math.random()*100))
+ .reduce(())

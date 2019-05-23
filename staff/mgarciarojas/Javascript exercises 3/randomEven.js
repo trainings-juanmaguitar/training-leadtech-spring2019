@@ -18,3 +18,7 @@ function randomEven(){
    })
    return sAllevenNumbers
  }
+ var randomEven = () => new Array (Math.ceil(Math.random()*100))
+ .fill(0)
+ .map((_,i) => i) // para no usar el elemento le ponemos "_" , sólo nos interesa el índice no los elementos ni el array 
+ .filter (n => !Boolean(n%2)) // n%2 === 0 guardará en un nuevo array solo los elementos pares

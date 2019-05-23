@@ -10,6 +10,7 @@ function randomLeastCommon(){
     var nRandomTwo=Math.floor(Math.random()*10);
     var nLMC=0
     var flag=false
+    
   while(flag){
   
   }
