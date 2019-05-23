@@ -78,14 +78,11 @@ function translate(string){
     var origin = string;
     var finale = [];
     for( var i = 0; i < origin.length; i++){        
-        if(origin[i] == ' '){
-          //console.log(" ");
+        if(origin[i] == ' '){        
           finale.push(" ")
-        }else if (origin[i] == "a" || origin[i] == "e" || origin[i] == "i" || origin[i] == "o" || origin[i] == "u"){
-          //console.log(origin[i]);
+        }else if (origin[i] == "a" || origin[i] == "e" || origin[i] == "i" || origin[i] == "o" || origin[i] == "u"){          
           finale.push(origin[i])
-        } else {
-          //console.log(origin[i] + "o" + origin[i]);
+        } else {        
           finale.push(origin[i] + "o" + origin[i]);
         }
     }
@@ -95,6 +92,29 @@ function translate(string){
 }
 
 translate("this is fun");
+/**
+ * Solución JuanMa
+ */
+function isVowel(sChar){
+    return ['a', 'e', 'i', 'o', 'u'].includes();
+} 
+function translate(sText){
+    var aChars = sText.plit('');
+    var sResult = '';
+    var sCurrentChar = '';
+    for( var i = 0; i < aChars.length; i++){
+        sCurrentChar = aChars[i];
+        if (isVowel(sCurrentChar) || sCurrentChar === ' '){
+            sResult = sCurrentChar;
+        } else {
+            sResult += sCurrentChar + '0' + sCurrentChar;
+        }
+    }
+    return sResult
+}   
+
+
+
 
 
 /**
@@ -142,5 +162,172 @@ translate("this is fun");
  */
 
  function reverse(string){
-     var
+     var initial = string;
+     var finale = [];
+     for( var i = initial.length-1; i >= 0; i--){
+         finale.push(initial[i]);
+     }
+     var string = finale.toString();
+     var reversed = string.replace(/[,]/g, '');
+     return reversed;
  }
+ reverse("jag testar");
+
+
+ /**
+  * translate()
+  * Represente un pequeño léxico bilingüe como un objeto Javascript 
+  * de la siguiente manera: 
+  * {
+  *     "merry" : "god", 
+  *     "christmas" : "jul", 
+  *     "and" : "och", 
+  *     "happy" : gott ", 
+  *     "new " : "nytt",
+  *     "year" :" år "
+  * }
+  *  y úselo para traducir sus tarjetas de Navidad del inglés al sueco.
+  */
+
+function translate(string){
+ var language = {
+    "merry" : "god", 
+    "christmas" : " jul", 
+    "and" : " och", 
+    "happy" : " gott", 
+    "new" : " nytt",
+    "year" : " år"
+  };
+  var translateInitial = string.split(' ');
+  var translateFinal = [];
+  for( var i = 0; i < translateInitial.length; i++){
+      if ( language[translateInitial[i]]){
+          translateFinal.push(language[translateInitial[i]]);
+      } else {
+          return "ERROR"
+      }
+  }
+  var string = translateFinal.toString();
+  var result = string.replace(/[,]/g, '');
+  return result;
+}
+
+/**
+ * Solución JuanMa
+ */
+// obteniendo un string
+message = "merry christmas and happy new year";
+
+function translate(sMessageEnglish){
+    var dictionary = {
+        "merry" : "god", 
+        "christmas" : " jul", 
+        "and" : " och", 
+        "happy" : " gott", 
+        "new" : " nytt",
+        "year" : " år"
+    };
+    var aWordsMessage = sMessageEnglish.split(" ");
+    var sCurrentWord = '';
+    var sTranslatedMessage = '';
+    for( var i = 0; i < aWordsMessage.length; i++){
+        sCurrentWord = aWordsMessage[i];
+        sTranslatedMessage += dictionary[sCurrentWord] + '';
+    }
+    return sTranslatedMessage.trim()
+}
+//obteniendo array y convertiendolo en string
+message = "merry christmas and happy new year";
+
+function translate(sMessageEnglish){
+    var dictionary = {
+        "merry" : "god", 
+        "christmas" : " jul", 
+        "and" : " och", 
+        "happy" : " gott", 
+        "new" : " nytt",
+        "year" : " år"
+    };
+    var aWordsMessage = sMessageEnglish.split(" ");
+    var sCurrentWord = '';
+    var sTranslatedMessage = [];
+    for( var i = 0; i < aWordsMessage.length; i++){
+        sCurrentWord = aWordsMessage[i];
+        sTranslatedMessage.push(dictionary[sCurrentWord]);
+    }
+    return sTranslatedMessage.join(' ')
+}
+//clousure
+
+
+/**
+ * findLongestWord()
+ * Escriba una función findLongestWord() que toma un array 
+ * de palabras y devuelve la longitud de la más larga.
+ */
+
+ function findLongestWord(array){     
+     var length = [];
+     for ( var i = 0; i < array.length; i++){
+        length.push(array[i].length); 
+     }
+     return Math.max.apply(null, length);
+ }
+
+
+ /**
+  * filterLongWords()
+  * Escriba una función filterLongWords() que tome una array de 
+  * palabras y un entero i y devuelva la array de palabras que 
+  * son más largas que i.
+  */
+
+
+  function filterLongWords(words, limit){      
+      var solutionWords = [];
+      for( var i = 0; i<words.length; i++){
+          if(words[i].length > limit){
+              solutionWords.push(words[i]);
+          }
+      }
+      return solutionWords;
+  }
+
+
+  /**
+   * charFreq()
+   * Escriba una función charFreq() que toma una cadena y construye 
+   * una lista de frecuencias de los caracteres que contiene. 
+   * Representa el listado de frecuencias como un objeto Javascript. 
+   * Pruébalo con algo como charFreq ("abbabcbdbabdbdbabababcbcbab").
+   */
+
+   function charFreq(string){
+       var solution = {};
+       for(var i = 0; i<string.length; i++){
+
+       }
+   }
+
+/**
+ * Solución JuanMa
+ */
+function charFreq(sText){
+    var numChars = sText.length;
+    var sCurrentChar = sText.length;
+    var oFreqChars = {};
+    for(var i = 0; i<numChars; i++){
+        sCurrentChar = sText[i];
+        if(!oFreqChars[sCurrentChar]){
+            oFreqChars[sCurrentChar] = 1;
+        }else{
+            ++oFreqChars[sCurrentChar];
+        }
+    }
+}
+
+/**
+ * Esto se puede recortar de la siguiente manera:
+ *  if(!oFreqChars[sCurrentChar]) oFreqChars[sCurrentChar] = 1;
+ *  else ++oFreqChars[sCurrentChar];        
+ */

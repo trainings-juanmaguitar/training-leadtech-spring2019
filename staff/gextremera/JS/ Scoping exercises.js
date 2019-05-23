@@ -71,7 +71,7 @@ var result = firstResult(2);
   * el valor inicial que le hemos dado al inicializar la variable.
   */
 
-  //4. What will you see in the console for the following example?
+//4. What will you see in the console for the following example?
 
 var a = 1; 
 function b() { 
