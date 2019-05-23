@@ -48,14 +48,17 @@ Write a program that writes in the console all the multiples of 23 less than 500
 */
 
 function multiplesOf23(){
-    var result = '';
-    var suma = 0;
-    
+    var listMultiples23 = '';
+    var sumMultiples23 = 0;
+    var messageResult = '';
+
     for (var i = 23; i < 500; i += 23){
-        result += i + '\t';
-        suma += i;
+        listMultiples23 += i + '\t';
+        sumMultiples23 += i;
     }
-    return "Elements: " + result + "\n" + "Suma: " + suma;
+
+    messageResult = "Elements: " + listMultiples23 + "\n" + "Suma: " + sumMultiples23;
+    return messageResult;
 }
 
 /*
@@ -111,8 +114,35 @@ Hint: https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Strin
 “rgb(0,255,0)”;
  */
 
-function getRGB (hexacolor){
+ //000FF => rgb(0,0,255)
 
+var colors = {
+    "#FFFFFF" : "Black",
+    "#000000" : "White",
+    "#FF0000" : "Red",
+    "#00FF00" : "Green",
+    "#0000FF" : "Blue"
+}
+
+ function getRGB (hexColor){
+    //Separación 2 en 2
+    var redHex = hexColor.substring(1,3);
+    var greenHex = hexColor.substring(3,5);
+    var blueHex = hexColor.subtring(5,7);
+
+    // Transformación en decimal
+    var redDecimal = parseInt(redHex, 16);
+    var greenDecimal = parseInt(greenHex, 16);
+    var blueDecimal = parseInt(blueHex, 16);
+
+    // Variable resultante
+    var result = 'rgb(' + redDecimal + ',' + greenDecimal + ',' + blueDecimal + ')';
+
+    if (colors[hexColor]){
+        result += colors[hexColor];
+    }
+
+    return result;
 }
 
 
@@ -130,4 +160,44 @@ So the result can be (for these cases):
 >>> var a = getRGB ('#00FF00'); 
 >>> a;
 “rgb(0,255,0)   verde”;
-  */
+*/
+
+// Crear función que diga cuantas veces se ha ejecutado
+var times = 0;
+
+function howManyTimes(){
+    times += 1;
+    
+    return times;
+}
+
+howManyTimes();
+
+// Crear función que diga cuantas veces se ha ejecutado. Sin variables globales.
+
+function getHowManyTimes() {
+    var howManyTimes = 0;
+    return function(){
+        return ++howManyTimes;
+    }
+}
+
+var howManyTimes = getHowManyTimes();
+
+// Función que pase una password y solo pueda acceder tres veces
+
+var password = setPassword("12345");
+
+function initPassword(password){
+    var numTries= 3;
+    return function(){
+        if (--numtries){
+            return "[" + numTries + "] - " + password
+        }
+        else {
+            return "Máximo número de intentos alcanzado"
+        }
+    }
+}
+
+var password = setPassword("12345");
