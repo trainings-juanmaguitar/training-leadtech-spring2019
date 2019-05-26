@@ -74,7 +74,6 @@ Look, just because I don't be givin' no man a foot massage don't make it right
 for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up
 the way the nigger talks. Motherfucker do that shit to me, he better paralyze
 my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?
-
 You think water moves fast? You should see ice. It moves like it has a mind.
 Like it knows it killed the world once and got a taste for murder. After the
 avalanche, it took us a week to climb out. Now, I don't know exactly when we
@@ -94,6 +93,14 @@ reduce((acc, word, index, array) => {
 
    return acc
     },{})
-    console.log(wordFreq(text))
-
-
+    const oObjectResult= wordFreq(text)
+  
+    var result = Object.keys(oObjectResult).map(key => [key, oObjectResult[key]])
+    .sort((a,b)=> {if (a[1]===b[1]) return 0
+     else return (a[1] > b[1]) ? -1 : 1
+       }
+   ).splice(0,10)
+   .map(key => key[0])
+   
+  
+    console.log(result)
