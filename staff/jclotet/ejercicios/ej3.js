@@ -35,6 +35,16 @@ function randomLargest2() {
 
 console.log(randomLargest2());
 
+//Solució 3
+
+var randomLargest = () => new Array(3)
+    .fill(0)
+    .map(() => Math.round(Math.random()*100))
+    .reduce((largest, number, index, array) => {
+        if (index === array.length-1) console.log(array)
+        return number > largest ? number : largest
+    }, 0)
+
 
 //randomEven()
 //Randomizes a number (range 0..100), then prints all the even numbers from 0 to the randomized.
@@ -49,6 +59,18 @@ function randomEven() {
 }
 
 console.log(randomEven());
+
+// Solució 2
+
+var randomEven2 = () => {
+  return new Array(Math.round(Math.random()*100))
+  .fill(0)
+  .map((_,i) => i)
+  .filter(n => !Boolean(n%2));
+}
+
+console.log('solució',randomEven2());
+
 
 //randomOdd()
 //Randomizes a number (range 0..100), then prints all the odd numbers from 40 to that one. 
@@ -69,6 +91,24 @@ function randomOdd() {
 }
 
 console.log(randomOdd());
+
+// Solució 2
+
+var randomOdd2 = () => {
+  var number = Math.floor(Math.random()*100);
+  console.log('number: ', number);
+  if (number>=40) {
+    return new Array(number +1 -40)
+            .fill(40)
+            .map((elem,i) => elem+i)
+            .filter(n => (Boolean(n%2) && (n < number)));
+  } else {
+    return 'Nothing to show';
+  }
+  
+}
+
+console.log('solució2',randomOdd2());
 
 //randomOddSmallers()
 //Randomizes a number (range 0..100), then prints all the odd numbers from 40 to that one. 
@@ -96,6 +136,26 @@ function randomOddSmallers() {
 
 console.log(randomOddSmallers());
 
+// Solució 2
+
+var randomOddSmallers2 = ()=>{
+  var number = Math.round(Math.random() * 100);
+  console.log(number);
+  if (number > 40) {
+    var myArray = new Array(number + 1 -40)
+    .fill(40)
+    .map((elem,index)=> elem + index)
+    .filter((elem, index)=>elem%2===0);
+  } else {
+    var myArray = new Array(40 - number + 1)
+    .fill(40)
+    .map((elem,index)=> elem - index);
+  }
+  return myArray;
+};
+
+console.log('randomOddSmallers2: ', randomOddSmallers2());
+
 
 //randomRandom()
 //Randomizes a number n in range 0..100. Now randomizes n more numbers in that range, printing the largest of them.
@@ -114,6 +174,18 @@ function randomRandom() {
 
 console.log(randomRandom());
 
+//Solució 2
+
+var randomRandom2 = ()=> {
+  var randomElements = Math.round(Math.random() * 100);
+  var aRandomNumbers = new Array(randomElements)
+    .fill(0)
+    .map((elem)=>Math.round(Math.random()*100))
+    .reduce((acc,elem,index)=>{return acc>elem ? acc : elem},0)
+  return aRandomNumbers;
+}
+
+console.log('randomRandom2 :', randomRandom2());
 
 //randomSum()
 //Randomizes a number (range 1000 .. 9999 ) and calculate the sum of its digits. 
@@ -133,7 +205,19 @@ function randomSum() {
 
 console.log(randomSum());
 
+//Solució2
 
+var randomSum2 = ()=> {
+  var randomNumber = Math.round(Math.random() * (9999 - 1000)) + 1000;
+  console.log(randomNumber);
+  var sum = (randomNumber + '')
+    .split('')
+    .map((elem)=>parseInt(elem))
+    .reduce((acc,elem,index)=>{return acc+elem },0);
+  return sum;
+}
+
+console.log( 'randomSum2: ', randomSum2());
 
 //randomOne()
 //Randomizes a number (range 1000..9999) and calculate the sum of its digits repeatedly until you reach one digit only. 
