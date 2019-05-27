@@ -60,7 +60,7 @@ app.use(function(req, res, next) {
 });
 
 // Host the book.
-app.use(Express.static(path.join(__dirname, './content/_book')));
+app.use(Express.static(path.join(__dirname, './stuff/gitbook/content/_book')));
 
 // Start the server.
 const port = process.env.PORT || 4001;

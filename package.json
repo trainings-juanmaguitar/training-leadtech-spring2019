@@ -4,11 +4,12 @@
   "description": "Host a GitBook in Express and secure it with Auth0 - the perfect setup for internal documentation!",
   "main": "index.js",
   "scripts": {
-    "build": "gitbook build ./content/",
-    "serve:book": "gitbook serve ./content/",
-    "serve:dev": "cross-env NODE_ENV=development node server",
-    "serve:prod": "cross-env NODE_ENV=production node server",
-    "postinstall": "npm run build"
+    "build": "gitbook build ./stuff/gitbook/content/",
+    "serve:book": "gitbook serve ./stuff/gitbook/content/",
+    "serve:dev": "cross-env NODE_ENV=development node index",
+    "serve:prod": "cross-env NODE_ENV=production node index",
+    "postinstall": "npm run build",
+    "now-build": "npm run serve:prod"
   },
   "keywords": [
     "auth0",
