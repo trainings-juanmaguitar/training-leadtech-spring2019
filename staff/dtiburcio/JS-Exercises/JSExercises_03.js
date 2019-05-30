@@ -12,6 +12,15 @@ function randomLargest(){
     return LargestNumber;
 }
 
+var randomLargest = () => new Array(3)
+    .fill(0)
+    .map(() => Math.round(Math.random()*100))
+    .reduce((largest, number, index, array) => {
+        if (index === array.length-1) console.log(array)
+        return number > largest ? number : largest
+    }, 0)
+
+
 /* randomEven()
 Randomizes a number (range 0..100), then prints all the even numbers from 0 
 to the randomized.  */
@@ -24,6 +33,12 @@ function randomEven(){
     }
     return ArrayWithValues;
 }
+
+var randomEven = () => new Array(Math.ceil(Math.random()*100))
+                                .fill(0)
+                                .map((_,i) => i) //establecer que no usaremos ese primer parámetro
+                                .filter(n => !Boolean(n%2))
+
 
 /* randomOdd()
 Randomizes a number (range 0..100), then prints all the odd numbers from 40 
