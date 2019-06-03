@@ -313,3 +313,36 @@ var wordsFreq = text => {
 console.log(wordsFreq(sText));
 
 
+// Trabajando con csv's
+
+var csv = `
+name,surname,age
+Pedro,Martinez,23
+Juan,Garcia,35
+`;
+
+var rows = csv.split('\n').filter(row=>Boolean(row)).slice(1).map(elem=>elem.split(',')).filter(elem => parseInt(elem[2],10) < 30);
+
+
+var b = arg1 || 0; //si se cumple arg1 le asigna arg1
+var c = arg2 && 34; //si se cumple arg2 le asigno 34
+
+function qwe(a=0,b=0) {
+  var a = a || 0;
+  var b = b || 0;
+  return a + b;
+
+}
+
+const sum = (a=0,b=0) => a + b;
+
+var array = [1,2];
+
+var a = array[0];
+var b = array[1];
+
+//Destructuring
+var [a,b] = [1,2]
+var [a,b,c=0] = [1,2]
+
+//Si no hay valor de c a la derecha le asigno cero
