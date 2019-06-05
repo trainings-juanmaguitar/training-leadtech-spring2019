@@ -16,3 +16,20 @@ var translate = function(text) {
 }
 
 console.log(translate("this is fun"));
+
+//--------------------------------------------------
+
+function translate(sText){
+  var aChars = sText.split(" ");
+  var sResult = '';
+  var sCurrentChar = '';
+  for (var i=0; i<aChart.length; i++){
+    sCurrentChar = aChart[i];
+    if( isVowel (sCurrentChar) || sCurrentChar === ' '){
+      sResult += sCurrentChar;
+    } else {
+      sResult += sCurrentChar + 'o' + sCurrentChar;
+    }
+    return sResult;
+  }
+}
