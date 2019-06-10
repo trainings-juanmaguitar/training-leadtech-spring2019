@@ -36,6 +36,15 @@ var randomEven = () => new Array(Math.ceil(Math.random()*100))
                             .map((_,i) => i) // de esta forma se salta el elemento y pilla el indice
                             .filter(n => !Boolean(n%2)) // esto es igual a .filter(n => n%2 === 0)
 
+var rondom = () => new Array(Math.round(Math.random()*100))
+                            .fill(0)
+                            .map((e,i)=> e=i)
+                            .filter(n => n%2===0)
+
+
+
+
+
  /**
   * randomOdd()
   * Aleatoriza un número (rango 0..100), luego imprime todos los números 
@@ -105,6 +114,30 @@ randomOdd();
     }
    }
    randomOddSmallers();
+
+/**
+ * Opción 2
+ */
+
+ var randomOddSmallers = () => {
+     var nValor = Math.round(Math.random()*100);     
+     if (nValor < 40) {
+         return new Array(nValor)
+         .fill(0)
+         .map((e,i) => e = i+1)
+     }else{
+         var aResult = nValor - 40;
+         return new Array(aResult)
+         .fill(40)
+         .map ((e,i) => e = e + i)
+         .filter(n => n = n%2 !==0)
+     }
+ }
+
+ 
+
+
+
 
    /**
     * randomRandom()

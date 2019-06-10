@@ -3,6 +3,15 @@ describe("gradeBook", function() {
   it("should be defined", function() {
     expect(gradeBook).toBeDefined();
   });
+  describe("should return a grade sus as 'A', 'B', 'C', 'D' or 'F'", function() {
+    it ("should be a string", function(){
+      expect(typeof gradeBook() === 'string').toBeTruthy();
+    }); 
+  });
+
+
+
+
 
   it("Average A", function() {
     expect(gradeBook(95,92,93)).toEqual('A')
