@@ -176,6 +176,21 @@ randomOdd();
      }
      randomSum();
 
+let total = () => {
+    var number = Math.round(Math.random()*9999)+1000;
+    console.log(number);
+    number.split('');
+    console.log(number);
+}
+total();
+
+
+
+
+
+
+
+
      /**
       * randomOne()
       * Asigna aleatoriamente un número (rango 1000..9999) y calcula la suma de sus 
