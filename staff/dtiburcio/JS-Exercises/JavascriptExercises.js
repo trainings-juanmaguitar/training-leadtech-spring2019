@@ -5,8 +5,6 @@ Write a function translate() that will translate a text into "rövarspråket". T
 
 function translateText(textForTranslation){
     var testTranslate = [];
-    var resultWithComas = '';
-    var resultWithoutComas = '';
 
     for (i=0; i < textForTranslation.length; i++){
         if (textForTranslation[i] == ''){
@@ -17,8 +15,8 @@ function translateText(textForTranslation){
             testTranslate.push(textForTranslation[i] + 'o' + textForTranslation[i]);
         }
     }
-    resultWithComas = testTranslate.toString();
-    resultTranslation = result.replace(/,/g, '');
+    var resultWithComas = testTranslate.toString();
+    var resultTranslation = result.replace(/,/g, '');
     return resultTranslation;
 }
 
@@ -131,14 +129,10 @@ Write a function charFreq() that takes a string and builds a frequency listing o
 function charFreq(stringEvaluate){
 
     var freq = new Object();  
-
-    for (var i = 0; i < stringEvaluate.length; i++){
     
-        if (freq[stringEvaluate[i]]){
-                freq[stringEvaluate[i]] += 1;
-        }else{
-            freq[stringEvaluate[i]] = 1;
-        }
+    for (var i = 0; i < stringEvaluate.length; i++){
+        if (freq[stringEvaluate[i]]) freq[stringEvaluate[i]] += 1;
+        else freq[stringEvaluate[i]] = 1;
     }
     return freq;
 }

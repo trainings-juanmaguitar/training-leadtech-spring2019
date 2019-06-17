@@ -34,7 +34,7 @@ passed as parameters
    calculator("division",10,5) // 2
 */
 
-function calculator(nameOperation, firstOperator, secondOperator){
+function calculatorPlus(nameOperation, firstOperator, secondOperator){
     var result = arguments[1];
     
     switch (nameOperation){
