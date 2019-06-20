@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Form Exercise</title>
+</head>
+<body>
+    <h1>HTML5 Form Exercise</h1>
+    <h2><b>A Simple Form</b></h2>
+    <h4><i>Form Fudamentals</i></h4>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Customer Info</legend>
+            <label for="username">Name: </label>
+            <input type="text" name="username" placeholder="Enter your name" required autofocus pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+            <label for="telephone">Telephone: </label>
+            <input type="tel" name="telephone" placeholder="Pattern 1-234-567-8910" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <label for="mail">Email address: </label>
+            <input type="email" name="mail" placeholder="Enter your email address" required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        </fieldset>
+        <fieldset>
+            <legend>Books</legend>
+            <datalist id="books" required autofocus>
+                <option value="">--Please choose an option--</option>
+                <option value="book1">Book 1</option>
+                <option value="book2">Book 2</option>
+                <option value="book3">Book 3</option>
+                <option value="book4">Book 4</option>
+                <option value="book5">Book 5</option>
+                <option value="book6">Book 6</option>
+            </datalist>
+            <label for="quantity">Quantity (maximum 5): </label>
+            <input type="number" name="quantity" min="1" max="5" required>               
+        </fieldset>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>

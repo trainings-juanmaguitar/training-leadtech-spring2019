@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>A Simple Form</h1>
+        <h4><i>Form Fundamentals</i></h4>
+        <form action="#" method="POST">
+            <fieldset>
+              <legend>Customer Info</legend>
+              <label for="name">Name:</label> 
+              <input id="name" type="text" placeholder="Enter your name" autofocus="x" required><br>
+              <label for="tel">Telephone:</label> 
+              <input id="tel" type="tel" placeholder="Pattern: 1-234-567-8910" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+              <label for="mail">Email address:</label> 
+              <input id="mail" type="email" placeholder="Enter your email address" multiple required>
+            </fieldset>
+          </form>
+          <form>
+            <fieldset>
+              <legend>Books</legend>
+              <input list="books" name="books">
+                <datalist id="books">
+                  <option value="book1">
+                  <option value="book2">
+                  <option value="book3">
+                </datalist>
+              <label for="quantity">Quantity (Maximum 5)</label>
+              <input id="quantity" type="number"  min="1" max="5">
+            </fieldset>
+            <input type="submit" name="submit" value="Submit">
+          </form>
+          <h6>@ 2011 Acme United. All rights reserved.</h6>
+    </section>
+</body>
+</html>

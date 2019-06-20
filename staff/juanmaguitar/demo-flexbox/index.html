@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <style>
+            #container {
+                border: 2px solid blue;
+                padding: 10px;
+                margin: 10px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 500px;
+            }
+            .box {
+                border: 1px solid black;
+                background: green;
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                color: #FFF;
+                font-size: 40px;
+                text-align: center;
+            }
+            .box1 { font-size: 20px; }
+            .box2 { font-size: 40px; order: 1; }
+            .box3 { font-size: 60px; align-self: center; }
+            .box4 { font-size: 30px; }
+            .box5 { font-size: 50px; order: -1; }
+            .box7 { order: -2; }
+            .box8 { order: 2; }
+            .box9 { align-self: flex-end; }
+        </style>
+    </head>
+    <body>
+        <h1 class="text-center">Hello World</h1>
+
+        <div id="container">
+            <div class="box box1">1</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box4">4</div>
+            <div class="box box5">5</div>
+            <div class="box box6">6</div>
+            <div class="box box7">7</div>
+            <div class="box box8">8</div>
+            <div class="box box9">9</div>
+            <div class="box box10">10</div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
