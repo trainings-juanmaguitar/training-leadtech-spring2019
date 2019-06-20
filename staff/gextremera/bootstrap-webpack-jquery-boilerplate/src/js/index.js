@@ -16,3 +16,14 @@ axios
     $('#list_post').html(htmlfirstTenPosts);
   })
   .catch(console.error);
+/**
+ * En casa intentat crear variable de todas las funciones .then y exportarlo e importarlo com modulos.
+ */
+
+ $('form')on('submit', function(e){
+   e.preventDefault();
+   const value = $('input').val();
+   console.log(value);
+ });
+
+ console.log('Hey!!!')
