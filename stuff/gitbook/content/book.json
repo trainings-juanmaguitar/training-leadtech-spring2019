@@ -1,0 +1,29 @@
+{
+  "title": "XYZ Documentation",
+  "links": {
+    "sidebar": {
+      "XYZ Documentation": "http://sandrinodimattia.net",
+      "Logout": "/logout"
+    }
+  },
+  "plugins": ["anchorjs", "video", "disqus", "noembed", "embed-pdf", "toggle-chapters"],
+  "pluginsConfig": {
+    "sharing": {
+        "google": false,
+        "facebook": false,
+        "twitter": false
+    },
+    "disqus": {
+      "shortName": "leadtech-training"
+    },
+    "anchorjs": {
+      "selector": "h2,h3,h4,h5",
+      "icon": "#",
+      "placement": "left",
+      "visible": "always",
+      "class": "custom-class another-one",
+      "truncate": 64,
+      "ariaLabel": "Anchor"
+    }
+  }
+}
