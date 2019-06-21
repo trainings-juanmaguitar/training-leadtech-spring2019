@@ -13,10 +13,6 @@ import {
 const getUrlCommentsPost = numPost =>
   `https://jsonplaceholder.typicode.com/comments?postId=${numPost}`;
 
-//jsonplaceholder.typicode.com/posts/1/comments
-// <li>qui est esse</li>
-// <li>ea molestias quasi exercitationem repellat qui ipsa sit aut"</li>
-
 $('form').on('submit', function(e) {
   e.preventDefault();
   const value = $('input').val();
