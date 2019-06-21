@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+.idea
+=======
 # General
 .DS_Store
 .AppleDouble
@@ -25,3 +28,4 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+>>>>>>> 79a9311d150f2c82b2911abbe2b40ff806267975
