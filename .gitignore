@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .idea
 =======
 # General
@@ -30,5 +29,8 @@ Temporary Items
 .apdisk
 
 
-stuff/gitbook/config.json
+.env
 stuff/gitbook/content/_book
+.DS_Store
+node_modules
+npm-debug.log
