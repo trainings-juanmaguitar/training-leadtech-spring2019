@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+.idea
+=======
 # General
 .DS_Store
 .AppleDouble
@@ -25,6 +28,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
 
 stuff/gitbook/config.json
 stuff/gitbook/content/_book
