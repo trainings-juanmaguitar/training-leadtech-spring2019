@@ -16,7 +16,7 @@
     "express"
   ],
   "engines": {
-    "node": "5.3.0"
+    "node": "10.3.0"
   },
   "author": "Sandrino Di Mattia",
   "license": "MIT",
