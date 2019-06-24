@@ -2,8 +2,11 @@
   "title": "XYZ Documentation",
   "links": {
     "sidebar": {
-      "XYZ Documentation": "http://sandrinodimattia.net",
-      "Logout": "/logout"
+      "1️⃣ Apuntes Principiante": "https://apuntes-javascript-principiante.netlify.com/",
+      "2️⃣ Apuntes Intermedio": "https://apuntes-javascript-intermedio.netlify.com/",
+      "3️⃣ Apuntes Avanzado": "https://apuntes-javascript-avanzado.netlify.com/",
+      "✍️ ApuntesJS Blog": "https://apuntesjs.es/",
+      "👨‍🏫 CodeMentor ": "https://www.codementor.io/juanmagarrido"
     }
   },
   "plugins": ["anchorjs", "video", "disqus", "noembed", "embed-pdf", "toggle-chapters"],
