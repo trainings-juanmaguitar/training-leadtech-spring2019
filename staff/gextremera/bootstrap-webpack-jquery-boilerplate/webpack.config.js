@@ -1,11 +1,11 @@
 const path = require('path');
-const webpack = require('webpack');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const PreloadWebpackPlugin = require('preload-webpack-plugin');
-const CssUrlRelativePlugin = require('css-url-relative-plugin');
+const webpack = require('./node_modules/@types/webpack');
+const HtmlWebPackPlugin = require('./node_modules/html-webpack-plugin');
+const { CleanWebpackPlugin } = require('./node_modules/clean-webpack-plugin/dist/clean-webpack-plugin');
+const CopyWebpackPlugin = require('./node_modules/copy-webpack-plugin/dist/cjs');
+const MiniCssExtractPlugin = require('./node_modules/mini-css-extract-plugin/dist/cjs');
+const PreloadWebpackPlugin = require('./node_modules/preload-webpack-plugin/build');
+const CssUrlRelativePlugin = require('./node_modules/css-url-relative-plugin/lib');
 
 const IS_DEV = process.env.NODE_ENV === 'dev';
 
@@ -134,8 +134,8 @@ const config = {
 };
 
 if (!IS_DEV) {
-  const TerserPlugin = require('terser-webpack-plugin');
-  const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+  const TerserPlugin = require('./node_modules/terser-webpack-plugin/dist/cjs');
+  const OptimizeCSSAssetsPlugin = require('./node_modules/optimize-css-assets-webpack-plugin/src');
 
   config.optimization.minimizer.push(
     new TerserPlugin(),
