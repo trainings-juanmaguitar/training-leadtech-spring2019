@@ -324,8 +324,8 @@ Juan,Garcia,35
 var rows = csv.split('\n').filter(row=>Boolean(row)).slice(1).map(elem=>elem.split(',')).filter(elem => parseInt(elem[2],10) < 30);
 
 
-var b = arg1 || 0; //si se cumple arg1 le asigna arg1
-var c = arg2 && 34; //si se cumple arg2 le asigno 34
+// var b = arg1 || 0; //si se cumple arg1 le asigna arg1
+// var c = arg2 && 34; //si se cumple arg2 le asigno 34
 
 function qwe(a=0,b=0) {
   var a = a || 0;
@@ -346,3 +346,20 @@ var [a,b] = [1,2]
 var [a,b,c=0] = [1,2]
 
 //Si no hay valor de c a la derecha le asigno cero
+
+
+
+function fizzBuzzReducer(acc, element) {
+  if (element % 15 === 0) return `${acc}Fizz Buzz\n`;
+  if (element % 5 === 0) return `${acc}Fizz\n`;
+  if (element % 3 === 0) return `${acc}Buzz\n`;
+  return `${acc}${element}\n`;
+}
+
+const nums = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9,
+  10, 11, 12, 13, 14, 15
+];
+
+console.log('*****************************************')
+console.log(nums.reduce(fizzBuzzReducer, ''));
