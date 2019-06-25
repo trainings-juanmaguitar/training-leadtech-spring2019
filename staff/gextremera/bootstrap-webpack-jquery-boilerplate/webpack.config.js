@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('./node_modules/@types/webpack');
 const HtmlWebPackPlugin = require('./node_modules/html-webpack-plugin');
-const { CleanWebpackPlugin } = require('./node_modules/clean-webpack-plugin/dist/clean-webpack-plugin');
+const CleanWebpackPlugin = require('./node_modules/clean-webpack-plugin/dist/clean-webpack-plugin');
 const CopyWebpackPlugin = require('./node_modules/copy-webpack-plugin/dist/cjs');
 const MiniCssExtractPlugin = require('./node_modules/mini-css-extract-plugin/dist/cjs');
 const PreloadWebpackPlugin = require('./node_modules/preload-webpack-plugin/build');
