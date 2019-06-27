@@ -25,11 +25,9 @@ This is the documentation for the training done for Leadtech during April, May, 
 
 * [16. ES2015: Arrow Functions, let, const, objects](sesiones/2019-06-05-session16-ejercicios-arrow-let-const-literals/README.md)
 * [17. ES2015: Default Parameters, Object Literals, Destructuring ](sesiones/2019-06-06-session17-ejercicios-literals-default-destructuring/README.md)
-* [18. ES2015: Rest & Spread Operators ](sesiones/2019-06-11-session18-destructuring-rest-spread/README.md)
+* [18. ES2015: Rest & Spread Operators ](sesiones/2019-06-18-session20-asynchronicity/README.md)
 * [19. ES2015: Classes & Modules](sesiones/2019-06-13-session19-classes-modules/README.md)
 * [20. Asynchronicity (Callbacks, Promises, Async-Await)](sesiones/2019-06-18-session20-asynchronicity/README.md)
 * [21. Project: Promises, AJAX, Webpack, DOM)](sesiones/2019-06-20-session21-promises-ajax-webpack-project/README.md)
 * [22. Project: AJAX, JSON, Events, DOM, API)](sesiones/2019-06-25-session22-project-ajax-json-api/README.md)
-
-
 
