@@ -2,6 +2,22 @@
 
 {% video %}https://vimeo.com/344506937{% endvideo %}
 
-- <https://github.com/xxhomey19/bootstrap-webpack-jquery-boilerplate>
-- <https://www.npmjs.com/package/axios>
-- <https://jsonplaceholder.typicode.com/>
+- [**AJAX**](https://apuntes-javascript-intermedio.netlify.com/AJAX/)
+
+- [List of Public API's](https://github.com/public-apis/public-apis)
+    - <https://thecatapi.com/>
+    - <https://jsonplaceholder.typicode.com/>
+        - <https://jsonplaceholder.typicode.com/posts>
+
+- DOM Selection
+    - <https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector>
+    - <https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll>
+
+- Events
+    - <https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener>
+    - <https://developer.mozilla.org/en-US/docs/Web/Events>
+
+```
+$('img').attr('src', urlImagen)
+```
+
