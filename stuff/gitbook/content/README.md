@@ -30,5 +30,5 @@ This is the documentation for the training done for Leadtech during April, May, 
 * [20. Asynchronicity (Callbacks, Promises, Async-Await)](sesiones/2019-06-18-session20-asynchronicity/README.md)
 * [21. Project: Promises, AJAX, Webpack, DOM)](sesiones/2019-06-20-session21-promises-ajax-webpack-project/README.md)
 * [22. Project: AJAX, JSON, Events, DOM, API)](sesiones/2019-06-25-session22-project-ajax-json-api/README.md)
-* [23. React)](sesiones/2019-06-27-session23-react/README.md)
+* [23. React](sesiones/2019-06-27-session23-react/README.md)
 
