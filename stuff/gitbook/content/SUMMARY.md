@@ -36,4 +36,4 @@
 
 ## Sesiones Julio
 
-* 24. React: Components & Events](sesiones/2019-07-01-session24-react-components-events/README.md)
+* [24. React: Components & Events](sesiones/2019-07-01-session24-react-components-events/README.md)
