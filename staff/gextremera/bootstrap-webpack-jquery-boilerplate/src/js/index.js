@@ -1,6 +1,7 @@
 import 'bootstrap';
 import axios from 'axios';
 import '../scss/index.scss';
+
 import {
   getDataFromResponse,
   getFirstTenItems,
@@ -27,3 +28,4 @@ const getUrlCommentsPost = numPost =>
         console.error(error);
       });
   });
+
