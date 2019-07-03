@@ -34,3 +34,6 @@
 * [22. Project: AJAX, JSON, Events, DOM, API)](sesiones/2019-06-25-session22-project-ajax-json-api/README.md)
 * [23. React](sesiones/2019-06-27-session23-react/README.md)
 
+## Sesiones Julio
+
+* 24. React: Components & Events](sesiones/2019-07-01-session24-react-components-events/README.md)
