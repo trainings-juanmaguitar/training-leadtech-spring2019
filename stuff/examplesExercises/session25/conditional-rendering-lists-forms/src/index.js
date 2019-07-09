@@ -5,10 +5,10 @@ import ReactDOM from "react-dom";
 // import MailBox, { messages } from "./components/MailBox";
 // import NumbersList, {numbers} from "./components/NumbersList";
 // import Blog, {posts} from "./components/Blog";
-import NameForm from "./components/NameForm";
+import FlavorForm from "./components/FlavorForm";
 
 
 ReactDOM.render(
-  <NameForm />,
+  <FlavorForm />,
   document.getElementById("root")
 );
