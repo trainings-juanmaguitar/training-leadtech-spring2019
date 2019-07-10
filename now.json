@@ -1,6 +1,0 @@
-{
-  "alias": ["leadtech-training"],
-  "builds": [
-    { "src": "stuff/gitbook/server.js", "use": "@now/node" }
-  ]
-}

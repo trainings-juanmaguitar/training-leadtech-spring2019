@@ -1,3 +1,5 @@
+.idea
+=======
 # General
 .DS_Store
 .AppleDouble
@@ -25,3 +27,10 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+.env
+stuff/gitbook/content/_book
+.DS_Store
+node_modules
+npm-debug.log

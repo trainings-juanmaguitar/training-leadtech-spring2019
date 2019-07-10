@@ -1,0 +1,11 @@
+/**
+ * Un proceso Sincrono o asincrono la diferencia entre un proceso asincrono o sincrono es que
+ * el código no avanza si no termina un proceso sincrono, en caso de ser asincrono
+ * el código sigue actuando mientras esperas respuesta
+ * 
+ */
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus eleifend orci, ut pellentesque libero condimentum eget. Aliquam congue nibh sed dolor aliquam, eu venenatis ligula venenatis. Sed varius varius ante, vitae fermentum purus ullamcorper sed. Sed non pretium diam. Morbi ut nulla facilisis elit porta varius et sed metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Etiam vel felis ut augue sollicitudin lacinia eu iaculis purus. Proin non magna enim. Quisque dictum enim orci, eget finibus ligula ornare quis. Phasellus ipsum libero, vestibulum sed sodales nec, venenatis eu diam. Cras aliquet, mauris sed varius tempor, nunc nunc malesuada felis, et tempus dolor leo imperdiet felis. Etiam a ante euismod, auctor lectus ut, pharetra enim. Sed non tincidunt quam, ac pharetra dolor. Integer in lacus risus.
+
+Sed in lectus consectetur, venenatis dolor ac, eleifend nunc. Quisque ornare nunc eget molestie tristique. Pellentesque eleifend ac arcu aliquet vestibulum. Etiam pellentesque ultrices erat a mollis. Quisque ornare auctor dui. Morbi pellentesque vel sapien quis lacinia. Aliquam erat volutpat. Nullam tincidu

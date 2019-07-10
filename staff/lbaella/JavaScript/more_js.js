@@ -115,16 +115,3 @@ function encodeWord(string) {
 }
 
 
-/*
-encodeWordPlus
-Improve the previous function to add a random number between 0 and 1000 every 7 characters
-*/
-
-function encodeWordPlus(string) {
-    var result = ""
-    for (var i=0; i<string.length; i++) {
-        if ((i+1)%7 == 0) result += Math.round(Math.random()*1000)
-        else result += string[i]
-    }
-    return result;
-}
