@@ -18,6 +18,10 @@ $('#image-button').on('click', (e)=>{
   const getDataFromResponse2 = ([{url}])=> url;
   const getImage = imageUrl => {$("#list_posts").replaceWith(`<img id="list_posts" src="${imageUrl}" alt="cat">`)};
 
+  const writeImageRandom = urlImageRandom => {
+    $("#imgRandom").attr("src", urlImageRandom);
+    };
+
   axios
   .get(URL_POSTS)
   .then(getDataFromResponse1)
