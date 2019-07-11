@@ -19,9 +19,13 @@ class MovieResults extends Component {
 
     state = {
         value: '',
-        listItems: []
+        items: []
     }
 
+    getMovieNames = () => {
+      const { items } = this.state;
+      return items.map(item => <li key={item.id}>{item.name}</li>)
+    }
     handleChange = event => {
       const {value} = event.target
       this.setState({ value }, () => {
@@ -34,15 +38,14 @@ class MovieResults extends Component {
         alert(`A new query was submitted: ${value}`);
         axios
             .get(URL_SEARCH)
-            .then(getDataFromResponse)
-            .then(getResultsFromData)
-            .then(getNameFromResults)
-         
-        event.preventDefault();
+            .then( ({ data }) => data)
+            .then( ({ results }) => this.setState({items: results}))              
+     
+            event.preventDefault()
       };
 
     render() {
-        const {value, listItems} = this.state;
+        const {value} = this.state;
         const {handleChange, handleSubmit} = this;
     
         return (
@@ -58,7 +61,7 @@ class MovieResults extends Component {
           </label>
           <input type="submit" value="Submit" />
         </form>
-        <ul id="list_posts">{listItems}</ul>
+        <ul id="list_posts">{this.getMovieNames()}</ul>
         </div>
          
         );
