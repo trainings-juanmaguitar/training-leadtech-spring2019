@@ -1,0 +1,22 @@
+.ListResults {
+    display:flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.ListResults li {
+    width: 100px;
+    margin: 10px;
+}
+
+.ListResults li img {
+    width: 100%;
+}
+
+.ListResults h3 {
+    font-size: 14px;
+}
+.card-text {
+    max-height: 100px;
+    overflow: hidden;
+}
