@@ -13,9 +13,13 @@ const getUrlApiSearch = query =>
 
 const getUrlImage = imageFileName => `https://image.tmdb.org/t/p/w500${imageFileName}`;
 
+// const imageBg = `https://api.themoviedb.org/3/movie/550/images?api_key=${API_KEY}&language=en-US&include_image_language=en,null`
+// const imageBg = () => `https://api.themoviedb.org/3/movie/550/images?api_key=${API_KEY}&language=en-US&include_image_language=en,null`
+
 class App extends Component {
     state = {
-        movies: []
+        movies: [],
+        imageBg: []
     };
 
     handleSearch = query => {
@@ -34,6 +38,39 @@ class App extends Component {
                 this.setState({ movies });
             });
     };
+
+
+    componentDidMount() {
+        axios.get(`https://api.themoviedb.org/3/movie/550/images?api_key=${API_KEY}&language=en-US&include_image_language=en,null`)
+            .then(({ data: { backdrops } }) => backdrops)
+            .then(function (backdrops) {
+                // handle success
+                console.log('Success');
+                
+                backdrops.map(({ file_path }) => ({
+                    file_path
+                }))
+            })
+            .then(imageBg => {
+                this.setState({ imageBg });
+                console.log('this imageBg', this.setState.imageBg);
+            });
+    };
+
+    // componentDidMount() {
+    //     axios.get(`https://api.themoviedb.org/3/movie/550/images?api_key=${API_KEY}&language=en-US&include_image_language=en,null`)
+    //         .then(function (response) {
+    //             // handle success
+    //             console.log(response.data.backdrops);
+    //         })
+    //         .catch(function (error) {
+    //             // handle error
+    //             console.log(error);
+    //         })
+    //         .finally(function () {
+    //             // always executed
+    //         });
+    // };
 
     render() {
         const { movies: results } = this.state;
