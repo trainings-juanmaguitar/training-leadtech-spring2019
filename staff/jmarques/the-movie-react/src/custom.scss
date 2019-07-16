@@ -1,0 +1,21 @@
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+.main-container {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    .container {
+        h3 {
+            text-align: left;
+        }
+    }
+}
+.box-card-columns {
+    //width: 100%;
+    margin: auto;
+    &.card-columns {
+        column-count: 4;
+    }
+}
