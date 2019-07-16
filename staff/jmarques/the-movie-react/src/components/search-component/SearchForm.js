@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 class SearchForm extends Component {
     state = {
         query: ''
@@ -21,7 +20,7 @@ class SearchForm extends Component {
 
     render() {
         const { query } = this.state
-        const { handleChange, handleSubmit } = this
+        const { handleChange, handleSubmit, handleKeyUp } = this
 
         return (
             <div className="container">
