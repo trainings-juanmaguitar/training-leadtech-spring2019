@@ -3,12 +3,12 @@ import React, {Component} from "react";
 import axios from 'axios'
 import SearchForm from './SearchForm'
 import ListResults from "./ListResults"
-
-
+import PopularMovies from "./PopularMovies"
 
 
 const API_KEY = 'e8202ecf51f9725243a72b1822989b46';
 const getUrlApiSearch = query => ` https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`;
+const getUrlApiPopular = () => ` https://api.themoviedb.org/3/movie/popular/movie?api_key=${API_KEY}`;
 const getUrlImage = imageFileName => `https://image.tmdb.org/t/p/w500${imageFileName}`;
 
 

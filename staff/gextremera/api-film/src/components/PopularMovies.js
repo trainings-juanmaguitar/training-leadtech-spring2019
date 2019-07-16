@@ -2,7 +2,7 @@ import React from "react";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const ListResults = ({results}) => (
+const PopularMovies = ({results}) => (
     <ul>
         { 
             results.map( ({title, urlImage, id}) => (
@@ -22,4 +22,4 @@ const ListResults = ({results}) => (
         }
     </ul>
 ) 
-export default ListResults;
+export default PopularMovies;
