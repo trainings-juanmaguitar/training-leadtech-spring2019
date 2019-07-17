@@ -21,6 +21,24 @@ const HeaderComponent = () =>  (
                 </li>
             </ul>
         </div>
+
+        <div className="btn-group">
+            <div className="btn-group dropleft" role="group">
+                <button type="button"
+                    className="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                    <span className="sr-only">Toggle Dropleft</span>
+                </button>
+                <div className="dropdown-menu">
+                    <a className="dropdown-item" href="/popular">Popular</a>
+                </div>
+            </div>
+            <button type="button" className="btn btn-secondary">
+                Secciones
+            </button>
+        </div>
     </nav> 
 );
 

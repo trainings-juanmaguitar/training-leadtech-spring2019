@@ -11,37 +11,37 @@ const getUrlApiSearch = query =>
 const getUrlImage = imageFileName => `https://image.tmdb.org/t/p/w500${imageFileName}`;
 
 class Home extends Component {
-    state = {
-        movies: []
-    };
+    // state = {
+    //     movies: []
+    // };
     // TODO Cambiar a fichero externo
     handleSearch = query => {
-        const url = getUrlApiSearch(query);
-        axios
-            .get(url)
-            .then(({ data: { results } }) => results)
-            .then(results =>
-                results.map(({ overview, title, poster_path }) => ({
-                    overview,
-                    title,
-                    urlImage: getUrlImage(poster_path),
-                }))
-            )
-            .then(movies => {
-                this.setState({ movies });
-            });
+        // const url = getUrlApiSearch(query);
+        // axios
+        //     .get(url)
+        //     .then(({ data: { results } }) => results)
+        //     .then(results =>
+        //         results.map(({ overview, title, poster_path }) => ({
+        //             overview,
+        //             title,
+        //             urlImage: getUrlImage(poster_path),
+        //         }))
+        //     )
+        //     .then(movies => {
+        //         this.setState({ movies });
+        //     });
     };
 
     render() {
-        const { movies: results } = this.state;
-        const { handleSearch } = this;
+        // const { movies: results } = this.state;
+        // const { handleSearch } = this;
         return (
             <div>
                 <HeaderComponent />
                 <div className="col-md-12 main-container">
-                    <SearchForm onSubmitForm={handleSearch} />
+                    <SearchForm />
                 </div>
-                <ListResults results={results} />
+                {/* <ListResults results={results} /> */}
             </div>
         );
     }
