@@ -40,3 +40,6 @@ This is the documentation for the training done for Leadtech during April, May, 
 * [26. React: Child/Parent, Styles & API](sesiones/2019-07-09-session26-react-child-parents-styles-api/README.md)
 * [27. React: Search & Display Results from API](sesiones/2019-07-11-session27-react-form-results-api/README.md)
 * [28. React: componentDidMount](sesiones/2019-07-15-session28-react-code-structure/README.md)
+* [29. React Router](sesiones/2019-07-16-session29-react-router/README.md)
+
+
