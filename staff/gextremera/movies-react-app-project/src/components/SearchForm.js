@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
 class SearchForm extends Component {
   state = {
     query: "",
@@ -23,10 +24,10 @@ class SearchForm extends Component {
     const { handleChange, handleSubmit } = this;
 
     return (
-      <div>
+      <div className="form-inline">        
         <form onSubmit={handleSubmit}>
-          <input value={query} onChange={handleChange}/>
-          <button>Search Movie</button>
+          <FormControl value={query} onChange={handleChange} type="text" placeholder="Search Movie" className="mr-sm-2" size="sm"/>
+          <Button variant="outline-info" size="sm">Search</Button>
         </form>
       </div>
     );

@@ -4,8 +4,9 @@ export const getResultsFromData = ({ data: { results } }) => results
 export const getData = ({ data }) => data
 
 export const getMovieData = results =>
-  results.map(({ id, title, poster_path }) => ({
+  results.map(({ id, title, poster_path, overview }) => ({
     id,
     title,
     urlImage: getUrlImage(poster_path),
+    overview,
   }))
