@@ -11,4 +11,5 @@
 
 - [`now` | zeit](https://zeit.co/)
 - [`surge`](https://surge.sh/)
+    - [deploy w/ surge in create-react-app](https://facebook.github.io/create-react-app/docs/deployment#surge-https-surgesh)
     

@@ -43,7 +43,4 @@
 * [28. React: componentDidMount](sesiones/2019-07-15-session28-react-code-structure/README.md)
 * [29. React Router](sesiones/2019-07-16-session29-react-router/README.md)
 * [30. React Router Redirects](sesiones/2019-07-18-session30-react-router-redirection/README.md)
-
-
-
-
+* [31. React Deploy](sesiones/2019-07-23-session31-deploy/README.md)
