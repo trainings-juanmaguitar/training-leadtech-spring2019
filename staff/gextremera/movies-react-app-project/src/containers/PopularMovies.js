@@ -1,11 +1,6 @@
 import React, { Component } from "react";
-
-import ListResults from "./ListResults/";
-
+import ListResults from "../components/ListResults/";
 import { getPopularMovies } from "../services/api";
-
-let counter = 0
-
 
 class PopularMovies extends Component {
 
@@ -23,7 +18,6 @@ class PopularMovies extends Component {
   }
 
   render() {
-    console.log(`rendered ${++counter} times`)
     const {popularMovies} = this.state
     return (
       <div>

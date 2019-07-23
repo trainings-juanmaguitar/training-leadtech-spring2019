@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-
-import ListResults from "./ListResults/";
-
+import ListResults from "../components/ListResults";
 import { getNowPlayingMovies } from "../services/api";
-
-
 
 class NowPlayingMovies extends Component {
 

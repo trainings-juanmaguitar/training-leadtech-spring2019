@@ -12,7 +12,7 @@ const getUrlApiMovieDetails = id =>
 const urlApiPopular = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
 const urlApiTopRated = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`;
 const urlApiNowPlaying = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`;
-
+const urlApiUpComing = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`;
 
 export const getSearchResults = query => {
     const url = getUrlApiSearch(query);
@@ -50,3 +50,11 @@ export const getNowPlayingMovies = () => {
     .then(getResultsFromData)
     .then(getMovieData)
 }
+
+export const getUpComingMovies = () => {
+  return axios
+    .get(urlApiUpComing)
+    .then(getResultsFromData)
+    .then(getMovieData)
+}
+

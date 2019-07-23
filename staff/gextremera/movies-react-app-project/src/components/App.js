@@ -2,25 +2,19 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 //Bootstrap Import Inicio
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col'
+import {Navbar, Nav, NavDropdown, Form, FormControl, Button, Col} from 'react-bootstrap';
 //Bootstrap Import Fin
 
-
-import SearchForm from "./SearchForm";
-import MoviesSearch from "./MoviesSearch/";
-import PopularMovies from "./PopularMovies";
-import TopRatedMovies from "./TopRatedMovies";
-import NowPlayingMovies from "./NowPlayingMovies";
-import MovieDetails from "./MovieDetails";
-import SearchResults from "./SearchResults";
+import SearchForm from "../containers/SearchForm";
+import PopularMovies from "../containers/PopularMovies";
+import TopRatedMovies from "../containers/TopRatedMovies";
+import MovieDetails from "../containers/MovieDetails";
+import NowPlayingMovies from "../containers/NowPlayingMovies";
+import UpComingMovies from "../containers/UpComing";
 
 
+import MoviesSearch from "../containers/MoviesSearch/";
+import SearchResults from "../containers/SearchResults";
 
 const App = () => (
   <Router>
@@ -37,19 +31,18 @@ const App = () => (
           <NavDropdown title="Categories" id="basic-nav-dropdown" bg="dark" variant="dark">
             <NavDropdown.Item><Link to="/popular">Popular</Link></NavDropdown.Item>
             <NavDropdown.Item><Link to="/topRated">Top Rated</Link></NavDropdown.Item>
-            <NavDropdown.Item><Link to="/now_playing">Now Playing</Link></NavDropdown.Item>            
+            <NavDropdown.Item><Link to="/now_playing">Now Playing</Link></NavDropdown.Item>
+            <NavDropdown.Item><Link to="/upcoming">UpComing</Link></NavDropdown.Item>
           </NavDropdown>
         </Nav>
-        <Form inline>
-          <MoviesSearch />          
-        </Form>
         </Navbar.Collapse>
       </Navbar>
       <Route path="/" exact component={MoviesSearch} />
       <Route path="/popular" component={PopularMovies} />
       <Route path="/topRated" component={TopRatedMovies} />
       <Route path="/now_playing" component={NowPlayingMovies} />
-      <Route path="/movie/:id" component={MovieDetails} />
+      <Route path="/upcoming" component={UpComingMovies} />
+      <Route path="/movie/:id" component={MovieDetails} />      
       <Route path="/search/:query" component={SearchResults} />
     </div>
   </Router>

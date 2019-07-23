@@ -7,7 +7,7 @@ import './index.css'
 
 const ListResults = ({ results }) => (
   <ul className='ListResults'>
-    {results.map(({ id, title, urlImage, overview }) => (
+    {results.map(({ urlImage, title, id, resume }) => (
       <li key={id}>
         <Card style={{ width: '18rem' }}>
           <Card.Img variant="top" src={urlImage} />
@@ -16,7 +16,7 @@ const ListResults = ({ results }) => (
               <Link to={`/movie/${id}`}>{title}</Link>
             </Card.Title>
             <Card.Text>
-             { overview }
+             { resume }
             </Card.Text>
           </Card.Body>
         </Card>

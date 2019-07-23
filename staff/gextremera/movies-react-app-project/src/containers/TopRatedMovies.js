@@ -1,13 +1,8 @@
 import React, { Component } from "react";
-
-import ListResults from "./ListResults/";
-
+import ListResults from "../components/ListResults/";
 import { getTopRatedMovies } from "../services/api";
 
-let counter = 0
-
 class TopRatedMovies extends Component {
-
   state = {
     topRatedMovies: []
   }
@@ -21,7 +16,6 @@ class TopRatedMovies extends Component {
   }
 
   render() {
-    console.log(`rendered ${++counter} times`)
     const {topRatedMovies} = this.state
     return (
       <div>

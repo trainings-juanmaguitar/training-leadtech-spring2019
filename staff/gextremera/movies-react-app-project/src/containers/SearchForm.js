@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
+import {FormControl, Button} from 'react-bootstrap';
+
 class SearchForm extends Component {
   state = {
     query: "",
@@ -13,7 +13,6 @@ class SearchForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-
     const { query } = this.state;
     const { onSubmitForm } = this.props;
     onSubmitForm(query);
@@ -24,10 +23,10 @@ class SearchForm extends Component {
     const { handleChange, handleSubmit } = this;
 
     return (
-      <div className="form-inline">        
+      <div>        
         <form onSubmit={handleSubmit}>
-          <FormControl value={query} onChange={handleChange} type="text" placeholder="Search Movie" className="mr-sm-2" size="sm"/>
-          <Button variant="outline-info" size="sm">Search</Button>
+          <input className="search-box-imput" value={query} onChange={handleChange} type="text" placeholder="Type Movie"/>
+          <button className="search-box-button">Search Movie</button>
         </form>
       </div>
     );
