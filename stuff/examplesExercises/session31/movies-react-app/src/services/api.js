@@ -3,9 +3,10 @@ import { getDataFromApi, getMoviesData } from "./helpers";
 
 const API_PREFIX = "https://api.themoviedb.org/3/";
 
-const getMoviesFromApi = url =>
-  getDataFromApi(API_PREFIX)(API_KEY)({ url, parseResults: getMoviesData });
-const getMovieFromApi = url => getDataFromApi(API_PREFIX)(API_KEY)({ url });
+const getDataFromApiMovies = getDataFromApi(API_PREFIX)(API_KEY)
+
+const getMoviesFromApi = url => getDataFromApiMovies({ url, parseResults: getMoviesData });
+const getMovieFromApi = url => getDataFromApiMovies({ url });
 
 export const [
   getSearchResults,

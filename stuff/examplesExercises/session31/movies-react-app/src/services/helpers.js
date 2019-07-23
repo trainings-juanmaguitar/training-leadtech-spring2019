@@ -10,9 +10,6 @@ const getData = ({ data }) => data
 export const getDataFromApi = PREFIX_URL => api_key => ({url, parseResults = d => d}) => (paramsApi = {}) => {
   const urlApi = urlJoin(PREFIX_URL, url)   
   const params = { ...paramsApi, api_key}
-  console.log(PREFIX_URL)
-  console.log(url)
-  console.log(urlApi)
   return axios
     .get(urlApi, { params })
     .then(getData) // data → results (array results, objeto unico)
