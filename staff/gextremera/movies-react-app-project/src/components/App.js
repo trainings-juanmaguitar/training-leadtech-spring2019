@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import logo from "../assets/images/logo.png";
 
 //Bootstrap Import Inicio
 import {Navbar, Nav, NavDropdown, Form, FormControl, Button, Col} from 'react-bootstrap';
 //Bootstrap Import Fin
 
-import SearchForm from "../containers/SearchForm";
+
 import PopularMovies from "../containers/PopularMovies";
 import TopRatedMovies from "../containers/TopRatedMovies";
 import MovieDetails from "../containers/MovieDetails";
@@ -22,7 +23,7 @@ const App = () => (
       <Navbar bg="dark" variant="dark" sticky="top" expand="lg">
         <Navbar.Brand>
           <Link to="/" exact>
-            <img src="/public/assets/images/logo.png"/>
+            <img className="logo" src={logo}/>
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
