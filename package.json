@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/trainings-juanmaguitar/training-leadtech/issues"
   },
-  "homepage": "https://github.com/trainings-juanmaguitar/training-leadtech#readme"
+  "homepage": "https://github.com/trainings-juanmaguitar/training-leadtech#readme",
+  "devDependencies": {
+    "react-test-renderer": "^16.8.6"
+  }
 }

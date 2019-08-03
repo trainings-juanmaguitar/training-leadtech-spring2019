@@ -1,0 +1,23 @@
+.ListResults {
+    display:flex;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.ListResults li {
+    width: 190px;
+    margin: 10px;
+}
+
+.ListResults li img {
+    width: 100%;
+}
+
+.ListResults h3 {
+    font-size: 14px;
+}
+
+.ListResults .card-text {
+    font-size: 14px;
+}

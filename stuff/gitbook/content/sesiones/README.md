@@ -44,3 +44,8 @@ This is the documentation for the training done for Leadtech during April, May, 
 * [30. React Router Redirects](2019-07-18-session30-react-router-redirection/README.md)
 * [31. React Deploy](2019-07-23-session31-deploy/README.md)
 * [32. Linter](2019-07-25-session32-linter/README.md)
+* [33. Hooks](2019-07-30-session33-hooks/README.md)
+
+## Final Project
+
+* [Final Project Notes](final-project-.notes/README.md)

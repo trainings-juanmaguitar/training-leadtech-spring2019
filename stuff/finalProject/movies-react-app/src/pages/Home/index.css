@@ -1,0 +1,10 @@
+.Home-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.Home-categories p {
+    margin: 0 30px;
+}
